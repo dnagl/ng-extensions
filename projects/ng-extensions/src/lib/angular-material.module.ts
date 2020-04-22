@@ -30,12 +30,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {BrowserModule} from "@angular/platform-browser";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatButtonModule} from "@angular/material/button";
+import {MatCommonModule} from "@angular/material/core";
 
 @NgModule({
   imports: [
     BrowserModule,
     MatCheckboxModule,
     MatCheckboxModule,
+    MatCommonModule,
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
@@ -70,6 +72,7 @@ import {MatButtonModule} from "@angular/material/button";
     BrowserModule,
     MatCheckboxModule,
     MatCheckboxModule,
+    MatCommonModule,
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
