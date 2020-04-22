@@ -19,6 +19,7 @@ export class NgNotificationComponent{
 
   public raiseNotification(notification: NgNotification): number{
     notification.id = this.notificationElements.length;
+    notification.colorTheme = ColorTheme.find(o => o.type == notification.type);
     this.notificationElements.push(notification);
     if(!notification.permanent){
       NgExtensionsUtils.delay(notification.duration)
@@ -41,6 +42,7 @@ export class NgNotification{
   private _permanent: boolean = false;
   private _duration: number = 2000;
   private _type: NgNotificationType = NgNotificationType.INFO;
+  private _colorTheme: any;
 
   get id(): number {
     return this._id;
@@ -89,6 +91,14 @@ export class NgNotification{
   set type(value: NgNotificationType) {
     this._type = value;
   }
+
+  get colorTheme(): any {
+    return this._colorTheme;
+  }
+
+  set colorTheme(value: any) {
+    this._colorTheme = value;
+  }
 }
 
 export enum NgNotificationType{
@@ -97,3 +107,30 @@ export enum NgNotificationType{
   WARN,
   ERROR
 }
+
+const ColorTheme = [
+  {
+    type: NgNotificationType.INFO,
+    backgroundTitle: "#0068FF",
+    backgroundText: "#0052CC",
+    fontColor: "#ffffff"
+  },
+  {
+    type: NgNotificationType.SUCCESS,
+    backgroundTitle: "#04BF33",
+    backgroundText: "#038C25",
+    fontColor: "#ffffff"
+  },
+  {
+    type: NgNotificationType.WARN,
+    backgroundTitle: "#F2E205",
+    backgroundText: "#BFB304",
+    fontColor: "#ffffff"
+  },
+  {
+    type: NgNotificationType.ERROR,
+    backgroundTitle: "#F20505",
+    backgroundText: "#BF0404",
+    fontColor: "#ffffff"
+  }
+];
