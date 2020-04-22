@@ -1,5 +1,7 @@
 # NgExtensions
 
+![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
+
 > NOTE: This repo is currently under construction and started a few days ago and there has to be done a lot of work to make this a useful repo 
 
 This project contains multiple useful classes and components which can be useful for everyday angular usage
