@@ -40,6 +40,7 @@ export class NgNotification{
   private _text: string = "This is a notification";
   private _permanent: boolean = false;
   private _duration: number = 2000;
+  private _type: NgNotificationType = NgNotificationType.INFO;
 
   get id(): number {
     return this._id;
@@ -80,4 +81,19 @@ export class NgNotification{
   set duration(value: number) {
     this._duration = value;
   }
+
+  get type(): NgNotificationType {
+    return this._type;
+  }
+
+  set type(value: NgNotificationType) {
+    this._type = value;
+  }
+}
+
+export enum NgNotificationType{
+  INFO,
+  SUCCESS,
+  WARN,
+  ERROR
 }
