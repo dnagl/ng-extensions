@@ -1,0 +1,21 @@
+.ng-extension-notification-container{
+  position: absolute;
+  z-index: 100;
+  margin: 1vw;
+  flex-flow: column-reverse;
+}
+.ng-extension-notification{
+  margin: 15px;
+}
+.ng-extension-notification-title-wrapper{
+  justify-content: space-between;
+}
+.ng-extension-notification-title {
+  margin-left: 10px;
+}
+.ng-extension-notification-title-icon{
+  cursor: pointer;
+}
+.ng-extension-notification-text{
+  padding: 5px;
+}
