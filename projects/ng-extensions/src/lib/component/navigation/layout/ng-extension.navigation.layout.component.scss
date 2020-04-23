@@ -1,17 +1,8 @@
-.ng-extension-navigation-side-container{
+.ng-extension-navigation-layout-container{
+  @extend .ng-extension-flex-column;
   height: 100%;
-  width: fit-content;
+  width: 100%;
 }
-.ng-extension-navigation-side-element{
-  padding: 5px 8px;
-  cursor: pointer;
-}
-.ng-extension-navigation-side-brand{
-  @extend .ng-extension-navigation-side-element
-}
-.ng-extension-navigation-side-brand > img{
-  max-height: 100%;
-}
-.ng-extension-navigation-side-brand > span{
-  font-size: 30px;
+.ng-extension-navigation-layout-content{
+  @extend .ng-extension-flex-row;
 }

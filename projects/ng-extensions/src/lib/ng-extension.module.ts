@@ -18,7 +18,7 @@ import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-exte
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
   ],
   exports: [
     NgNotificationComponent,
