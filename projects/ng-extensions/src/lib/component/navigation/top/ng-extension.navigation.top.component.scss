@@ -1,0 +1,16 @@
+.ng-extension-navigation-top-container{
+  width: 100%;
+}
+.ng-extension-navigation-top-element{
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.ng-extension-navigation-top-brand{
+  @extend .ng-extension-navigation-top-element
+}
+.ng-extension-navigation-top-brand > img{
+  max-height: 100%;
+}
+.ng-extension-navigation-top-brand > span{
+  font-size: 30px;
+}

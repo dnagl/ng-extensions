@@ -1,0 +1,10 @@
+<div class="ng-extension-flex-row ng-extension-navigation-top-container">
+  <div *ngIf="navigationBrandElement != null" class="ng-extension-navigation-top-brand">
+    <img *ngIf="navigationBrandElement.image" alt="" [src]="navigationBrandElement.content">
+    <span *ngIf="!navigationBrandElement.image">{{navigationBrandElement.content}}</span>
+  </div>
+  <div *ngFor="let navigationElement of navigationContext.navigationElements" class="ng-extension-navigation-top-element">
+    <mat-icon *ngIf="navigationElement.matIcon != ''">{{navigationElement.matIcon}}</mat-icon>
+    <span *ngIf="navigationElement.name != ''">{{navigationElement.name}}</span>
+  </div>
+</div>
