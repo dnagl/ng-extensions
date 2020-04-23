@@ -22,8 +22,7 @@ export class NgNotificationComponent{
     notification.colorTheme = ColorTheme.find(o => o.type == notification.type);
     this.notificationElements.push(notification);
     if(!notification.permanent){
-      NgExtensionsUtils.delay(notification.duration)
-        .then(() => {this.removeNotification(notification.id)});
+      setTimeout(() => {this.removeNotification(notification.id);}, notification.duration);
     }
     return notification.id
   }
