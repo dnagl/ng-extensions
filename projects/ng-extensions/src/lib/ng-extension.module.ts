@@ -4,11 +4,13 @@ import {NgNotificationComponent} from "./component/notification/ng-extension.not
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
 import {NgNavigationTopComponent} from "./component/navigation/top/ng-extension.navigation.top.component";
+import {NgNavigationSideComponent} from "./component/navigation/side/ng-extension.navigation.side.component";
 
 @NgModule({
   declarations: [
     NgNotificationComponent,
-    NgNavigationTopComponent
+    NgNavigationTopComponent,
+    NgNavigationSideComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import {NgNavigationTopComponent} from "./component/navigation/top/ng-extension.
   ],
   exports: [
     NgNotificationComponent,
-    NgNavigationTopComponent
+    NgNavigationTopComponent,
+    NgNavigationSideComponent
   ],
   providers: []
 })
