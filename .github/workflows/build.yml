@@ -34,4 +34,4 @@ jobs:
 
       - name: Run Build
         run:
-          npm run-script build
+          npm run-script build-prod
