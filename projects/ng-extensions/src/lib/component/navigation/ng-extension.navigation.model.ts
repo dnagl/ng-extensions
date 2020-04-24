@@ -4,6 +4,11 @@ export class NgNavigationContext{
   private _navigationBrandElement: NgNavigationBrandElement;
 
 
+  constructor(navigationElements: Array<NgNavigationElement> = new Array<NgNavigationElement>(), navigationBrandElement: NgNavigationBrandElement = new NgNavigationBrandElement()) {
+    this._navigationElements = navigationElements;
+    this._navigationBrandElement = navigationBrandElement;
+  }
+
   get navigationElements(): Array<NgNavigationElement> {
     return this._navigationElements;
   }
@@ -27,6 +32,11 @@ export class NgNavigationElement{
   private _matIcon: string;
   private _children: Array<NgNavigationElement>;
 
+  constructor(name: string = 'element', matIcon: string = 'home', children: Array<NgNavigationElement> = new Array<NgNavigationElement>()) {
+    this._name = name;
+    this._matIcon = matIcon;
+    this._children = children;
+  }
 
   get name(): string {
     return this._name;
@@ -57,6 +67,11 @@ export class NgNavigationBrandElement{
 
   private _image: boolean;
   private _content: string;
+
+  constructor(image: boolean = false, content: string = 'home') {
+    this._image = image;
+    this._content = content;
+  }
 
   get image(): boolean {
     return this._image;

@@ -1,0 +1,31 @@
+<div class="ng-extension-flex-column">
+  <div class="ng-extension-flex-column notification-form">
+    <form class="ng-extension-flex-column">
+      <mat-form-field>
+        <mat-label>Notification Title</mat-label>
+        <input matInput [(ngModel)]="notificationTemplate.title" name="notification-title">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Notification Text</mat-label>
+        <input matInput [(ngModel)]="notificationTemplate.text" name="notification-text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Closing Icon</mat-label>
+        <input matInput [(ngModel)]="notificationTemplate.closeIcon" name="notification-closeIcon">
+      </mat-form-field>
+      <mat-checkbox [(ngModel)]="notificationTemplate.permanent" name="notification-permanent">Is Permanent</mat-checkbox>
+      <mat-form-field>
+        <mat-label>Visibility time</mat-label>
+        <input matInput [(ngModel)]="notificationTemplate.duration" type="number" [disabled]="notificationTemplate.permanent" name="notification-duration">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Notification Type</mat-label>
+        <mat-select [(ngModel)]="notificationTemplate.type" name="notification-type">
+          <mat-option *ngFor="let type of notificationType | enumToArray" [value]="type.key">{{type.value}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="raise()">Raise Notification</button>
+    </form>
+  </div>
+</div>
+<ng-notification [width]="350"></ng-notification>

@@ -11,6 +11,7 @@ import {RouterModule} from "@angular/router";
 import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
 import { LocalStorageProvider } from './storage/ng-extension.storage.local.provider';
 import { SessionStorageProvider } from './storage/ng-extension.storage.session.provider';
+import {NgExtensionPipeModule} from "./pipe/ng-extension.pipe.module";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SessionStorageProvider } from './storage/ng-extension.storage.session.p
     CommonModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    RouterModule
+    RouterModule,
+    NgExtensionPipeModule,
   ],
   exports: [
     NgNotificationComponent,
