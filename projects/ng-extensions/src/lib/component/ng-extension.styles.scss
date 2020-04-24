@@ -16,7 +16,7 @@
 }
 .ng-extension-flex-column{
   @extend .ng-extension-flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 .ng-extension-flex-row-center{
   @extend .ng-extension-flex-row;
@@ -25,4 +25,11 @@
 .ng-extension-flex-column-center{
   @extend .ng-extension-flex-column;
   @extend .ng-extension-flex-center;
+}
+.ng-extension-no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

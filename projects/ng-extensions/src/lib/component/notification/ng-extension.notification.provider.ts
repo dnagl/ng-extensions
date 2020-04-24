@@ -102,26 +102,26 @@ export enum NgNotificationType{
 const ColorTheme = [
   {
     type: NgNotificationType.INFO,
-    backgroundTitle: "#0068FF",
-    backgroundText: "#0052CC",
+    backgroundTitle: "#0052CC",
+    backgroundText: "#0068FF",
     fontColor: "#ffffff"
   },
   {
     type: NgNotificationType.SUCCESS,
-    backgroundTitle: "#04BF33",
-    backgroundText: "#038C25",
+    backgroundTitle: "#038C25",
+    backgroundText: "#04BF33",
     fontColor: "#ffffff"
   },
   {
     type: NgNotificationType.WARN,
-    backgroundTitle: "#F2E205",
-    backgroundText: "#BFB304",
+    backgroundTitle: "#F2B705",
+    backgroundText: "#F2CB05",
     fontColor: "#ffffff"
   },
   {
     type: NgNotificationType.ERROR,
-    backgroundTitle: "#F20505",
-    backgroundText: "#BF0404",
+    backgroundTitle: "#BF0404",
+    backgroundText: "#F20505",
     fontColor: "#ffffff"
   }
 ];

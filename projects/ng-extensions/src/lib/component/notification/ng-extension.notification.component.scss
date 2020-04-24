@@ -1,24 +1,36 @@
 .ng-extension-notification-container{
   position: absolute;
   z-index: 100;
-  margin: 1vw;
+  right: 3vw;
+  top: 0;
+  height: calc(100% - 1vh);
   flex-flow: column-reverse;
 }
 .ng-extension-notification{
-  margin: 15px;
+  margin-top: 15px;
   width: 100%;
   color: #ffffff;
 }
 .ng-extension-notification-title-wrapper{
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .ng-extension-notification-title {
-  margin-left: 10px;
-  height: 35px;
+  margin-left: 5px;
 }
 .ng-extension-notification-title-icon{
   cursor: pointer;
 }
 .ng-extension-notification-text{
-  padding: 5px;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 16px;
+}
+.ng-extension-notification-text > span{
+  margin: 5px;
 }

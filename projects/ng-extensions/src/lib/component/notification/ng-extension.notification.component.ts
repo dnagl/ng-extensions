@@ -11,6 +11,8 @@ import {NgExtensionNotificationProvider} from "./ng-extension.notification.provi
 })
 export class NgNotificationComponent{
 
+  @Input() width: number = 100;
+
   constructor(public notificationProvider: NgExtensionNotificationProvider) {
 
   }
