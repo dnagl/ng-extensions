@@ -1,6 +1,7 @@
 export class NgNavigationContext{
 
   private _navigationElements: Array<NgNavigationElement>;
+  private _navigationBrandElement: NgNavigationBrandElement;
 
 
   get navigationElements(): Array<NgNavigationElement> {
@@ -9,6 +10,14 @@ export class NgNavigationContext{
 
   set navigationElements(value: Array<NgNavigationElement>) {
     this._navigationElements = value;
+  }
+
+  get navigationBrandElement(): NgNavigationBrandElement {
+    return this._navigationBrandElement;
+  }
+
+  set navigationBrandElement(value: NgNavigationBrandElement) {
+    this._navigationBrandElement = value;
   }
 }
 

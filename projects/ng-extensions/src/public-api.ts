@@ -7,6 +7,7 @@ export * from './lib/ng-extension.module'
 export * from './lib/common/ng-extensions.utils';
 
 export * from './lib/component/navigation/ng-extension.navigation.model';
+export * from './lib/component/navigation/ng-extension.navigation.provider';
 export * from './lib/component/navigation/side/ng-extension.navigation.side.component';
 export * from './lib/component/navigation/top/ng-extension.navigation.top.component';
 export * from './lib/component/notification/ng-extension.notification.component';
