@@ -7,6 +7,7 @@ import {NgNavigationTopComponent} from "./component/navigation/top/ng-extension.
 import {NgNavigationSideComponent} from "./component/navigation/side/ng-extension.navigation.side.component";
 import {NgExtensionNavigationProvider} from "./component/navigation/ng-extension.navigation.provider";
 import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-extension.navigation.layout.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-exte
     CommonModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    RouterModule
   ],
   exports: [
     NgNotificationComponent,
