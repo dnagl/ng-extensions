@@ -12,6 +12,7 @@ export * from './lib/component/navigation/layout/ng-extension.navigation.layout.
 export * from './lib/component/navigation/side/ng-extension.navigation.side.component';
 export * from './lib/component/navigation/top/ng-extension.navigation.top.component';
 export * from './lib/component/notification/ng-extension.notification.component';
+export * from './lib/component/notification/ng-extension.notification.provider';
 
 export * from './lib/connector/ng-extensions.rest.service';
 export * from './lib/connector/ng-extensions.ws.service';

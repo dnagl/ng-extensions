@@ -8,6 +8,7 @@ import {NgNavigationSideComponent} from "./component/navigation/side/ng-extensio
 import {NgExtensionNavigationProvider} from "./component/navigation/ng-extension.navigation.provider";
 import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-extension.navigation.layout.component";
 import {RouterModule} from "@angular/router";
+import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {RouterModule} from "@angular/router";
     NgNavigationTopComponent
   ],
   providers: [
-    NgExtensionNavigationProvider
+    NgExtensionNavigationProvider,
+    NgExtensionNotificationProvider
   ]
 })
 export class NgExtensionModule{
