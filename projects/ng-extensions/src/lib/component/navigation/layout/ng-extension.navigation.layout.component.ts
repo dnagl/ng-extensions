@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NgNavigationBrandElement, NgNavigationContext} from "../ng-extension.navigation.model";
+import {NgExtensionNavigationProvider} from "../ng-extension.navigation.provider";
 
 @Component({
   selector: 'ng-navigation-layout',
@@ -11,7 +11,7 @@ import {NgNavigationBrandElement, NgNavigationContext} from "../ng-extension.nav
 })
 export class NgNavigationLayoutComponent {
 
-  public navigationContext: NgNavigationContext;
-  public navigationBrandElement: NgNavigationBrandElement;
+  constructor(public navigationProvider: NgExtensionNavigationProvider) {
+  }
 
 }
