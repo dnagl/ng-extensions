@@ -16,3 +16,7 @@ export * from './lib/component/notification/ng-extension.notification.provider';
 
 export * from './lib/connector/ng-extensions.rest.service';
 export * from './lib/connector/ng-extensions.ws.service';
+
+export * from './lib/storage/ng-extension.storage';
+export * from './lib/storage/ng-extension.storage.local.provider';
+export * from './lib/storage/ng-extension.storage.session.provider';

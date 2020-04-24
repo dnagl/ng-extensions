@@ -9,6 +9,8 @@ import {NgExtensionNavigationProvider} from "./component/navigation/ng-extension
 import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-extension.navigation.layout.component";
 import {RouterModule} from "@angular/router";
 import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
+import { LocalStorageProvider } from './storage/ng-extension.storage.local.provider';
+import { SessionStorageProvider } from './storage/ng-extension.storage.session.provider';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {NgExtensionNotificationProvider} from "./component/notification/ng-exten
   ],
   providers: [
     NgExtensionNavigationProvider,
-    NgExtensionNotificationProvider
+    NgExtensionNotificationProvider,
+    LocalStorageProvider,
+    SessionStorageProvider
   ]
 })
 export class NgExtensionModule{
