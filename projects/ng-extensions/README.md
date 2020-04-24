@@ -1,24 +1,48 @@
 # NgExtensions
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
 
-## Code scaffolding
+## Project
 
-Run `ng generate component component-name --project ng-extensions` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-extensions`.
-> Note: Don't forget to add `--project ng-extensions` or else it will be added to the default project in your `angular.json` file. 
+This library provides multiple controls, pipes and providers which can be used in any Angular project.
+
+## Demo
+
+> The demo page is currently under construction and will be available soon
+
+## Issues, Bugs and Contribution
+
+When finding a bug or issue or if you have ideas for enhancements, 
+just create a new issue for this project. If you are confident that you are able to fix your findings or any other issue in the backlog, feel free to contribute to this project.
+
+## Features
+
+> todo -> completing soon
+
+The following features can be found in this project.
+
+* Components
+* Pipes
+* Providers
+* Style
+  * Many reusable scss classes for flexbloxes, navigation elements, ...
+
+---
+
+## Installation
+
+The installation of the package can be done with npm.
+> `npm i ng-extensions`
 
 ## Build
 
-Run `ng build ng-extensions` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run the following steps to build the project locally.
 
-## Publishing
+* `npm install -g @angular\cli`
+* `npm install`
+* `ng build` for development and `ng build --prod` for production
+* `ng serve` for running the demo project locally
 
-After building your library with `ng build ng-extensions`, go to the dist folder `cd dist/ng-extensions` and run `npm publish`.
+---
 
-## Running unit tests
-
-Run `ng test ng-extensions` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Dependencies
