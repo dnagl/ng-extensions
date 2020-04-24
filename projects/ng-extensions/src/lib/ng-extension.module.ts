@@ -6,22 +6,27 @@ import {CommonModule} from "@angular/common";
 import {NgNavigationTopComponent} from "./component/navigation/top/ng-extension.navigation.top.component";
 import {NgNavigationSideComponent} from "./component/navigation/side/ng-extension.navigation.side.component";
 import {NgExtensionNavigationProvider} from "./component/navigation/ng-extension.navigation.provider";
+import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-extension.navigation.layout.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     NgNotificationComponent,
-    NgNavigationTopComponent,
-    NgNavigationSideComponent
+    NgNavigationLayoutComponent,
+    NgNavigationSideComponent,
+    NgNavigationTopComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    RouterModule
   ],
   exports: [
     NgNotificationComponent,
-    NgNavigationTopComponent,
-    NgNavigationSideComponent
+    NgNavigationLayoutComponent,
+    NgNavigationSideComponent,
+    NgNavigationTopComponent
   ],
   providers: [
     NgExtensionNavigationProvider
