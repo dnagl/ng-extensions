@@ -5,7 +5,7 @@
       <mat-icon class="ng-extension-notification-title-icon" (click)="notificationProvider.removeNotification(notification.id)">clear</mat-icon>
     </div>
     <div class="ng-extension-flex-row ng-extension-notification-text" [ngStyle]="{'background-color' : notification.colorTheme.backgroundText}">
-      <span>{{notification.text}}</span>
+      <span>{{notification.id}}</span>
     </div>
   </div>
 </div>

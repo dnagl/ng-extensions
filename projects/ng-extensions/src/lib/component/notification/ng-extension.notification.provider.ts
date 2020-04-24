@@ -10,7 +10,7 @@ export class NgExtensionNotificationProvider{
   }
 
   public raiseNotification(notification: NgNotification): number{
-    notification.id = this.notificationElements.length;
+    notification.id = Math.floor(Math.random() * 100) + 1;
     notification.colorTheme = ColorTheme.find(o => o.type == notification.type);
     this.notificationElements.push(notification);
     if(!notification.permanent){
