@@ -8,10 +8,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NotificationComponent} from "./component/notification/notification.component";
 import {AngularMaterialModule} from "../../../ng-extensions/src/lib/angular-material.module";
 import {FormsModule} from "@angular/forms";
+import {ComponentComponent} from "./component/component.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    ComponentComponent,
     NotificationComponent
   ],
   imports: [

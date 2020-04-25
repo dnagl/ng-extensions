@@ -1,5 +1,7 @@
 <div class="ng-extension-flex-row ng-extension-navigation-top-container" *ngIf="navigationProvider.navigationContextTop != null">
-  <div *ngIf="navigationProvider.navigationContextTop.navigationElements != null" class="ng-extension-flex-column-center ng-extension-no-select ng-extension-navigation-top-brand">
+  <div
+    *ngIf="navigationProvider.navigationContextTop.navigationBrandElement != null && navigationProvider.navigationContextTop.navigationBrandElement.content != null"
+    class="ng-extension-flex-column-center ng-extension-no-select ng-extension-navigation-top-brand">
     <img *ngIf="navigationProvider.navigationContextTop.navigationBrandElement.image" alt="" [src]="navigationProvider.navigationContextTop.navigationBrandElement.content">
     <span *ngIf="!navigationProvider.navigationContextTop.navigationBrandElement.image">{{navigationProvider.navigationContextTop.navigationBrandElement.content}}</span>
   </div>
