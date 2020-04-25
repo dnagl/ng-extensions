@@ -22,7 +22,7 @@ export class AppComponent {
       new NgNavigationElement('Pipes', 'subject', null, []),
     ];
 
-    this.navigationProvider.navigationContextTop = new NgNavigationContext(navigationElements, navigationBrandElement);
+    this.navigationProvider.navigationContextSide = new NgNavigationContext(navigationElements, navigationBrandElement);
   }
 
 }

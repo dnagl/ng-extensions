@@ -1,13 +1,20 @@
 .ng-extension-navigation-side-container{
   height: 100%;
-  width: fit-content;
+  border-right: 1px solid #dedede;
+  align-items: center !important;
 }
 .ng-extension-navigation-side-element{
-  padding: 5px 8px;
+  font-size: 25px;
+  margin-bottom: 23px;
   cursor: pointer;
 }
+.ng-extension-navigation-side-element > mat-icon{
+  margin-right: 8px;
+}
 .ng-extension-navigation-side-brand{
-  @extend .ng-extension-navigation-side-element
+  margin-bottom: 22px;
+  padding: 10px;
+  border-bottom: 1px solid #dedede;
 }
 .ng-extension-navigation-side-brand > img{
   max-height: 100%;

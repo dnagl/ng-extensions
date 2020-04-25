@@ -9,7 +9,7 @@ This library provides multiple controls, pipes and providers which can be used i
 
 ## Demo
 
-> The demo page is currently under construction and will be available soon
+A demo project with all the features described can be found here: [Demo Project](https://dnagl.github.io/ng-extensions/)
 
 ## Issues, Bugs and Contribution
 

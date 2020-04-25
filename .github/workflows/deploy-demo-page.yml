@@ -2,7 +2,7 @@ name: Deploy demo page
 
 on:
   push:
-    branch: 2-example-project
+    branch: master
 
 jobs:
   build-and-deploy:
