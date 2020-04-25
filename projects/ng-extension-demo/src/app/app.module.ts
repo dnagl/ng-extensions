@@ -5,10 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgExtensionModule} from "../../../ng-extensions/src/lib/ng-extension.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NotificationComponent} from "./notification/notification.component";
+import {NotificationComponent} from "./component/notification/notification.component";
 import {AngularMaterialModule} from "../../../ng-extensions/src/lib/angular-material.module";
 import {FormsModule} from "@angular/forms";
-import {NgExtensionPipeModule} from "../../../ng-extensions/src/lib/pipe/ng-extension.pipe.module";
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import {NgExtensionPipeModule} from "../../../ng-extensions/src/lib/pipe/ng-exte
     FormsModule,
     NgExtensionModule,
     AngularMaterialModule,
-    AppRoutingModule,
-    NgExtensionPipeModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

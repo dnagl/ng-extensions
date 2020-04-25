@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from "./app.component";
-import {NotificationComponent} from "./notification/notification.component";
+import {NotificationComponent} from "./component/notification/notification.component";
 
 
 const routes: Routes = [

@@ -1,6 +1,7 @@
 # NgExtensions
 
 ![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
+[![Open Source Helpers](https://www.codetriage.com/dnagl/ng-extensions/badges/users.svg)](https://www.codetriage.com/dnagl/ng-extensions)
 
 ## Project
 

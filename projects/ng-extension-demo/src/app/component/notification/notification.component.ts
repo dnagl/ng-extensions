@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {
   NgExtensionNotificationProvider,
   NgNotification, NgNotificationType
-} from "../../../../ng-extensions/src/lib/component/notification/ng-extension.notification.provider";
+} from "../../../../../ng-extensions/src/lib/component/notification/ng-extension.notification.provider";
 
 @Component({
   selector: 'notification',

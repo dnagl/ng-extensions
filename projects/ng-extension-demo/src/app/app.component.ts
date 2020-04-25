@@ -4,6 +4,7 @@ import {
   NgNavigationBrandElement,
   NgNavigationContext, NgNavigationElement
 } from "../../../ng-extensions/src/lib/component/navigation/ng-extension.navigation.model";
+import {NotificationComponent} from "./component/notification/notification.component";
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,10 @@ export class AppComponent {
   constructor(public navigationProvider: NgExtensionNavigationProvider) {
     let navigationBrandElement: NgNavigationBrandElement = new NgNavigationBrandElement(false, "NgExtensions");
     let navigationElements: Array<NgNavigationElement> = [
-      new NgNavigationElement('Home', 'home'),
-      new NgNavigationElement('Components', 'touch_app', []),
-      new NgNavigationElement('Providers', 'settings_ethernet', []),
-      new NgNavigationElement('Pipes', 'subject', []),
+      new NgNavigationElement('Home', 'home', AppComponent),
+      new NgNavigationElement('Components', 'touch_app', NotificationComponent,[]),
+      new NgNavigationElement('Providers', 'settings_ethernet', null, []),
+      new NgNavigationElement('Pipes', 'subject', null, []),
     ];
 
     this.navigationProvider.navigationContextTop = new NgNavigationContext(navigationElements, navigationBrandElement);

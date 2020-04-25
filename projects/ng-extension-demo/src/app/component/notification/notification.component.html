@@ -21,7 +21,10 @@
       <mat-form-field>
         <mat-label>Notification Type</mat-label>
         <mat-select [(ngModel)]="notificationTemplate.type" name="notification-type">
-          <mat-option *ngFor="let type of notificationType | enumToArray" [value]="type.key">{{type.value}}</mat-option>
+          <mat-option [value]="notificationType.INFO">INFO</mat-option>
+          <mat-option [value]="notificationType.SUCCESS">SUCCESS</mat-option>
+          <mat-option [value]="notificationType.WARN">WARN</mat-option>
+          <mat-option [value]="notificationType.ERROR">ERRO</mat-option>
         </mat-select>
       </mat-form-field>
       <button mat-raised-button color="primary" (click)="raise()">Raise Notification</button>

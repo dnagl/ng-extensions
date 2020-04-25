@@ -1,9 +1,12 @@
 <div class="ng-extension-flex-column ng-extension-navigation-side-container" *ngIf="navigationProvider.navigationContextSide != null">
-  <div *ngIf="navigationProvider.navigationContextSide.navigationBrandElement != null" class="ng-extension-flex-column-center ng-extension-navigation-side-brand">
+  <div *ngIf="navigationProvider.navigationContextSide.navigationBrandElement != null" class="ng-extension-flex-column-center ng-extension-no-select ng-extension-navigation-side-brand">
     <img *ngIf="navigationProvider.navigationContextSide.navigationBrandElement.image" alt="" [src]="navigationProvider.navigationContextSide.navigationBrandElement.content">
     <span *ngIf="!navigationProvider.navigationContextSide.navigationBrandElement.image">{{navigationProvider.navigationContextSide.navigationBrandElement.content}}</span>
   </div>
-  <div *ngFor="let navigationElement of navigationProvider.navigationContextSide.navigationElements" class="ng-extension-navigation-side-element">
+  <div
+    *ngFor="let navigationElement of navigationProvider.navigationContextSide.navigationElements"
+    [routerLink]="getComponentPath(navigationElement.component)"
+    class="ng-extension-flex-row-center ng-extension-no-select ng-extension-navigation-side-element">
     <mat-icon *ngIf="navigationElement.matIcon != ''">{{navigationElement.matIcon}}</mat-icon>
     <span *ngIf="navigationElement.name != ''">{{navigationElement.name}}</span>
   </div>

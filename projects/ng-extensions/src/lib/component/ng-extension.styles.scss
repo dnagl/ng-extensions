@@ -26,7 +26,11 @@
   @extend .ng-extension-flex-column;
   @extend .ng-extension-flex-center;
 }
+.ng-extension-no-outline{
+  outline: none;
+}
 .ng-extension-no-select{
+  @extend .ng-extension-no-outline;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
