@@ -1,0 +1,32 @@
+name: Release package
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: npm install
+        run:
+          npm i
+
+      - name: Run Build
+        run:
+          npm run-script build-prod
+
+      - name: Publish NPM package
+        run: npm publish ./dist/ng-extensions
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN_NPM }}

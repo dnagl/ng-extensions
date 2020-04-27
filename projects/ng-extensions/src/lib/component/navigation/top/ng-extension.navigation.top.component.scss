@@ -1,16 +1,25 @@
 .ng-extension-navigation-top-container{
   width: 100%;
+  border-bottom: 1px solid #dedede;
+  align-items: center !important;
 }
 .ng-extension-navigation-top-element{
-  padding: 5px 8px;
+  font-size: 28px;
+  margin-right: 23px;
   cursor: pointer;
 }
+.ng-extension-navigation-top-element > mat-icon{
+  margin-right: 8px;
+}
 .ng-extension-navigation-top-brand{
-  @extend .ng-extension-navigation-top-element
+  margin-right: 22px;
+  padding: 10px;
+  border-right: 1px solid #dedede;
 }
 .ng-extension-navigation-top-brand > img{
   max-height: 100%;
 }
 .ng-extension-navigation-top-brand > span{
+  font-weight: bold;
   font-size: 30px;
 }

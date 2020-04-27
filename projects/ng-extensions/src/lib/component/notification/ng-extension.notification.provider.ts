@@ -29,9 +29,10 @@ export class NgNotification{
 
   private _id: number = 0;
   private _title: string = "Notification";
+  private _closeIcon: string = "clear";
   private _text: string = "This is a notification";
   private _permanent: boolean = false;
-  private _duration: number = 2000;
+  private _duration: number = 3500;
   private _type: NgNotificationType = NgNotificationType.INFO;
   private _colorTheme: any;
 
@@ -49,6 +50,14 @@ export class NgNotification{
 
   set title(value: string) {
     this._title = value;
+  }
+
+  get closeIcon(): string {
+    return this._closeIcon;
+  }
+
+  set closeIcon(value: string) {
+    this._closeIcon = value;
   }
 
   get text(): string {
