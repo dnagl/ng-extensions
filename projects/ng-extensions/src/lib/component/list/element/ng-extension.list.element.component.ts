@@ -5,7 +5,7 @@ import {NgListElement} from "../ng-extension.list.model";
   selector: 'ng-list-element',
   templateUrl: './ng-extension.list.element.component.html',
   styleUrls: [
-    '../../ng-extension.style.scss',
+    '../../ng-extension.styles.scss',
     './ng-extension.list.element.component.scss'
   ]
 })
