@@ -1,8 +1,8 @@
 name: Deploy demo page
 
-on:
-  push:
-    branch: master
+#on:
+#  push:
+#    branch: master
 
 jobs:
   build-and-deploy:

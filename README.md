@@ -11,6 +11,10 @@ This library provides multiple controls, pipes and providers which can be used i
 
 A demo project with all the features described can be found here: [Demo Project](https://dnagl.github.io/ng-extensions/)
 
+## Docs
+
+The documentation can be found in the doc directory in the repository.
+
 ## Issues, Bugs and Contribution
 
 When finding a bug or issue or if you have ideas for enhancements, 

@@ -1,7 +1,9 @@
 name: Release package
 on:
-  release:
-    types: [published]
+  push:
+    branch: master
+#  release:
+#    types: [published]
 
 jobs:
   build:
@@ -12,18 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
 
       - name: npm install
         run:
