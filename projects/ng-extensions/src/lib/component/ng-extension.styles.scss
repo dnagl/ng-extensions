@@ -23,19 +23,19 @@
 }
 .ng-extension-flex-row-center{
   @extend .ng-extension-flex-row;
-  @extend .ng-extension-flex-space-between;
+  @extend .ng-extension-flex-center;
 }
 .ng-extension-flex-column-center{
   @extend .ng-extension-flex-column;
-  @extend .ng-extension-flex-space-between;
+  @extend .ng-extension-flex-center;
 }
 .ng-extension-flex-row-space-between{
-  @extend .ng-extension-flex-row;
-  @extend .ng-extension-flex-center;
+  @extend .ng-extension-flex-row-center;
+  @extend .ng-extension-flex-space-between;
 }
 .ng-extension-flex-column-space-between{
-  @extend .ng-extension-flex-column;
-  @extend .ng-extension-flex-center;
+  @extend .ng-extension-flex-column-center;
+  @extend .ng-extension-flex-space-between;
 }
 .ng-extension-no-outline{
   outline: none;

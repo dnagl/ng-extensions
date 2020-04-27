@@ -1,10 +1,20 @@
 .ng-extension-list-element{
   width: 100%;
-  padding: 5px;
+}
+.ng-extension-list-element-text-container > div{
+  margin-left: 5px;
 }
 .ng-extension-list-element-title{
   font-size: 18px;
+  font-weight: 600;
 }
 .ng-extension-list-element-content{
-
+  font-size: 16px;
+}
+.ng-extension-list-element-action-container, .ng-extension-list-element-action{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.ng-extension-list-element-action{
+  cursor: pointer;
 }

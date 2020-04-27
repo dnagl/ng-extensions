@@ -1,8 +1,8 @@
 <div
   *ngIf="listElement != null && listElement.show"
   [style.height]="height"
-  class="ng-extension-flex-space-between ng-extension-list-element" [id]="'ng-extension-list-element_' + listElement.id">
-  <div class="ng-extension-flex-column">
+  class="ng-extension-flex-row-space-between ng-extension-no-select ng-extension-list-element">
+  <div class="ng-extension-flex-column ng-extension-list-element-text-container">
     <div class="ng-extension-list-element-title">
       <span>{{listElement.title}}</span>
     </div>
@@ -12,12 +12,12 @@
   </div>
   <div
     *ngIf="listElement.actionItems != null && listElement.actionItems.length > 0"
-    class="ng-extension-flex-row-center">
+    class="ng-extension-flex-row-center ng-extension-list-element-action-container">
       <div
         *ngFor="let action of listElement.actionItems"
         class="ng-extension-flex-column-center ng-extension-list-element-action">
-        <button *ngIf="action.isIcon" mat-icon-button [color]="action.color">{{action.content}}</button>
-        <button *ngIf="!action.isIcon" mat-mini-fab [color]="action.color">{{action.content}}</button>
+        <button *ngIf="action.isIcon" mat-icon-button [style.color]="action.color"><mat-icon>{{action.content}}</mat-icon></button>
+        <button *ngIf="!action.isIcon" mat-mini-fab [style.color]="action.color"><mat-icon>{{action.content}}</mat-icon></button>
       </div>
   </div>
 </div>

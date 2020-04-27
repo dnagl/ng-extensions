@@ -9,11 +9,13 @@ import {NotificationComponent} from "./component/notification/notification.compo
 import {AngularMaterialModule} from "../../../ng-extensions/src/lib/angular-material.module";
 import {FormsModule} from "@angular/forms";
 import {ComponentComponent} from "./component/component.component";
+import {ListComponent} from "./component/list/notification.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentComponent,
+    ListComponent,
     NotificationComponent
   ],
   imports: [

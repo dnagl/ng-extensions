@@ -6,7 +6,7 @@ export class NgListElement{
   private _show: boolean;
   private _actionItems: Array<NgListElementAction>;
 
-  constructor(id: number = 0, title: string = '', content: string, show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>()) {
+  constructor(id: number = 0, title: string = '', content: string = '', show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>()) {
     this._id = id;
     this._title = title;
     this._content = content;
@@ -53,6 +53,10 @@ export class NgListElement{
   set actionItems(value: Array<NgListElementAction>) {
     this._actionItems = value;
   }
+
+  public addActionItem(action: NgListElementAction): void{
+    this.actionItems.push(action);
+  }
 }
 
 export class NgListElementAction{
@@ -62,7 +66,7 @@ export class NgListElementAction{
   private _color: string;
   private _callback: {(elementAction: NgListElementAction): void;};
 
-  constructor(isIcon: boolean = true, content: string = 'edit', color: string = 'primary', callback: { (elementAction: NgListElementAction): void } = null) {
+  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', callback: { (elementAction: NgListElementAction): void } = null) {
     this._isIcon = isIcon;
     this._content = content;
     this._color = color;
@@ -106,7 +110,7 @@ export class NgListElementAction{
   }
 }
 
-export class NgExtensionListCollection{
+export class NgListCollection{
 
   private _id: number;
   private _title: string;
@@ -116,7 +120,7 @@ export class NgExtensionListCollection{
   private _backgroundColorTitle: string;
   private _listElements: Array<NgListElement>;
 
-  constructor(id: number = 0, title: string = '', expand: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00B0FF', listElements: Array<NgListElement> = new Array<NgListElement>()) {
+  constructor(id: number = 0, title: string = '', expand: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', listElements: Array<NgListElement> = new Array<NgListElement>()) {
     this._id = id;
     this._title = title;
     this._expand = expand;
@@ -181,5 +185,18 @@ export class NgExtensionListCollection{
 
   set listElements(value: Array<NgListElement>) {
     this._listElements = value;
+  }
+
+  public addListElement(listElement: NgListElement): void{
+    listElement.id = this._listElements.length == 0 ? 0 : this._listElements[this._listElements.length - 1].id + 1;
+    this._listElements.push(listElement);
+  }
+
+  public removeListElement(listCollection: NgListElement): void{
+    this.listElements = this.listElements.filter(o => o.id != listCollection.id);
+  }
+
+  public cleanElements(): void{
+    this.listElements = new Array<NgListElement>();
   }
 }
