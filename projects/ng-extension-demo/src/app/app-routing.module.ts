@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {NotificationComponent} from "./component/notification/notification.component";
 import {ComponentComponent} from "./component/component.component";
+import {ListComponent} from "./component/list/notification.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'component/notification',
     component: NotificationComponent
+  },
+  {
+    path: 'component/list',
+    component: ListComponent
   },
   {
     path: '',

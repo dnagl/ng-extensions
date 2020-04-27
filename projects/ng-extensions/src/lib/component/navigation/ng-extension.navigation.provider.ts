@@ -10,7 +10,6 @@ export class NgExtensionNavigationProvider{
   constructor() {
   }
 
-
   get navigationContextTop(): NgNavigationContext {
     return this._navigationContextTop;
   }

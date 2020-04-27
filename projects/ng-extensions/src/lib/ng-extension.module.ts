@@ -11,9 +11,16 @@ import {RouterModule} from "@angular/router";
 import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
 import { LocalStorageProvider } from './storage/ng-extension.storage.local.provider';
 import { SessionStorageProvider } from './storage/ng-extension.storage.session.provider';
+import {NgListElementComponent} from "./component/list/element/ng-extension.list.element.component";
+import {NgListCollectionComponent} from "./component/list/collection/ng-extension.list.collection.component";
+import {NgExtensionListProvider} from "./component/list/ng-extension.list.provider";
+import {NgListGalleryComponent} from "./component/list/gallery/ng-extension.list.gallery.component";
 
 @NgModule({
   declarations: [
+    NgListCollectionComponent,
+    NgListElementComponent,
+    NgListGalleryComponent,
     NgNotificationComponent,
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
@@ -26,12 +33,16 @@ import { SessionStorageProvider } from './storage/ng-extension.storage.session.p
     RouterModule
   ],
   exports: [
+    NgListCollectionComponent,
+    NgListElementComponent,
+    NgListGalleryComponent,
     NgNotificationComponent,
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
     NgNavigationTopComponent
   ],
   providers: [
+    NgExtensionListProvider,
     NgExtensionNavigationProvider,
     NgExtensionNotificationProvider,
     LocalStorageProvider,

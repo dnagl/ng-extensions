@@ -6,6 +6,11 @@ export * from './lib/ng-extension.module'
 
 export * from './lib/common/ng-extensions.utils';
 
+export * from './lib/component/list/ng-extension.list.model';
+export * from './lib/component/list/ng-extension.list.provider';
+export * from './lib/component/list/collection/ng-extension.list.collection.component';
+export * from './lib/component/list/element/ng-extension.list.element.component';
+export * from './lib/component/list/gallery/ng-extension.list.gallery.component';
 export * from './lib/component/navigation/ng-extension.navigation.model';
 export * from './lib/component/navigation/ng-extension.navigation.provider';
 export * from './lib/component/navigation/layout/ng-extension.navigation.layout.component';
