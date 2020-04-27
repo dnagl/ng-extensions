@@ -11,9 +11,13 @@ import {RouterModule} from "@angular/router";
 import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
 import { LocalStorageProvider } from './storage/ng-extension.storage.local.provider';
 import { SessionStorageProvider } from './storage/ng-extension.storage.session.provider';
+import {NgListElementComponent} from "./component/list/element/ng-extension.list.element.component";
+import {NgListCollectionComponent} from "./component/list/collection/ng-extension.list.collection.component";
 
 @NgModule({
   declarations: [
+    NgListCollectionComponent,
+    NgListElementComponent,
     NgNotificationComponent,
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
@@ -26,6 +30,8 @@ import { SessionStorageProvider } from './storage/ng-extension.storage.session.p
     RouterModule
   ],
   exports: [
+    NgListCollectionComponent,
+    NgListElementComponent,
     NgNotificationComponent,
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
