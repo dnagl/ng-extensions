@@ -1,43 +1,18 @@
-# List
-
-There are three components which were introduced to realize dynamic lists
-
-## ListElement
+# ListElement
 
 The `<ng-list-element>` component is used to wrap up the information which a list element can hold.
 
-### Usage
+## Usage
 
 ```html
 <ng-list-element [height]="40px" [listElement]="listElementObj"></ng-list-element>
 ```
 
-### Properties
-
-#### Properties NgListElement
-
-|Name|Type|Default|Description|
-|----|----|-------|-----------|
-|id|`number`|`0`|Id of the element. Gets set automatically when using a NgListCollection.|
-|title|`string`|`''`|Title of the list element. Can be null.|
-|content|`string`|`''`|Content of the list element. Can be null.|
-|show|`boolean`|`true`|Element is visible.|
-|actionItems|`Array<NgListElementAction>`|`[]`|Holds visible element actions|
-
-#### Properties NgListElementAction
-
-|Name|Type|Default|Description|
-|----|----|-------|-----------|
-|isIcon|`boolean`|`true`|If Material Icons should be used|
-|content|`string`|`''`|Icon name or text|
-|color|`string`|`''`|Font color of content|
-|callback|`(elementAction: NgListElementAction): void`|`null`|Callback which gets called when button is pressed|
-
-## ListCollection
+# ListCollection
 
 A `<ng-list-collection>` combines multiple `<ng-list-elements>` and adds a header on top of all elements.
  
-### Usage
+## Usage
 
 ```html
     <ng-list-collection [collectionId]="5"></ng-list-collection>
@@ -52,43 +27,13 @@ export class MyComponent{
 }
 ```
 
-### Properties
-
-#### Properties NgListCollection
-
-|Name|Type|Default|Description|
-|----|----|-------|-----------|
-|id|`number`|`0`|Id of object. Gets set automatically when using NgExtensionListProvider.|
-|title|`string`|`''`|Title of the list collection.|
-|expand|`boolean`|`true`|List collection is expanded.|
-|show|`boolean`|`true`|Collection is visible|
-|backgroundColor|`string`|`#ffffff`|Background color of collection|
-|backgroundColorTitle|`string`|`#00E676`|Background color of collection title|
-|listElements|`Array<NgListElement>`|`[]`|Elements in collection|
-
-#### Properties NgExtensionListProvider
-
-|Name|Type|Default|Description|
-|----|----|-------|-----------|
-|listCollections|`Array<NgListCollection>`|`[]`|All available list collection objects|
-
-### Methods
-
-#### Methods NgExtensionListProvider
-
-|Method|Return Type|Description|
-|------|-----------|-----------|
-|`addListCollection(listCollection: NgListCollection)`|`void`|Add a NgListCollection object|
-|`removeListCollection(listCollection: NgListCollection)`|`void`|Remove a NgListCollection object|
-|`cleanListCollections()`|`void`|Delete all NgListCollection objects|
-
-## ListGallery
+# ListGallery
 
 When multiple `<ng-list-collection>` elements are needed besides each other, a `<ng-list-gallery>` element can be used.
 This will display all `<ng-list-collection>` elements which are available in the `NgExtensionListProvider`
 and marked as `show=true`. 
 
-### Usage
+## Usage
 
 ```html
     <ng-list-gallery></ng-list-gallery>
@@ -103,3 +48,51 @@ export class MyComponent {
 }
 ```
 
+# Properties
+
+## Properties NgListElement
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|id|`number`|`0`|Id of the element. Gets set automatically when using a NgListCollection.|
+|title|`string`|`''`|Title of the list element. Can be null.|
+|content|`string`|`''`|Content of the list element. Can be null.|
+|show|`boolean`|`true`|Element is visible.|
+|actionItems|`Array<NgListElementAction>`|`[]`|Holds visible element actions|
+
+## Properties NgListElementAction
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|isIcon|`boolean`|`true`|If Material Icons should be used|
+|content|`string`|`''`|Icon name or text|
+|color|`string`|`''`|Font color of content|
+|callback|`(elementAction: NgListElementAction): void`|`null`|Callback which gets called when button is pressed|
+
+## Properties NgListCollection
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|id|`number`|`0`|Id of object. Gets set automatically when using NgExtensionListProvider.|
+|title|`string`|`''`|Title of the list collection.|
+|expand|`boolean`|`true`|List collection is expanded.|
+|show|`boolean`|`true`|Collection is visible|
+|backgroundColor|`string`|`#ffffff`|Background color of collection|
+|backgroundColorTitle|`string`|`#00E676`|Background color of collection title|
+|listElements|`Array<NgListElement>`|`[]`|Elements in collection|
+
+## Properties NgExtensionListProvider
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|listCollections|`Array<NgListCollection>`|`[]`|All available list collection objects|
+
+# Methods
+
+## Methods NgExtensionListProvider
+
+|Method|Return Type|Description|
+|------|-----------|-----------|
+|`addListCollection(listCollection: NgListCollection)`|`void`|Add a NgListCollection object|
+|`removeListCollection(listCollection: NgListCollection)`|`void`|Remove a NgListCollection object|
+|`cleanListCollections()`|`void`|Delete all NgListCollection objects|

@@ -7,7 +7,7 @@ They can contain as many text you want.
 ## Usage
 
 ```html
-    `<ng-notification [width]="400"></ng-notification>`
+<ng-notification [width]="400"></ng-notification>
 ```
 
 ```typescript
@@ -58,21 +58,21 @@ In this example the notification would disappear in 5 seconds.
   }
 ```
 
-## Properties
+# Properties
 
-### Properties NgNotificationComponent
+## Properties NgNotificationComponent
 
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
 |width|`number`|`200`|Width of notifications|
 
-### Properties NgExtensionNotificationProvider
+## Properties NgExtensionNotificationProvider
 
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
 |notificationElements|`Array<NgNotification>`|`[]`|All current displayed notifications.|
 
-### Properties NgNotification
+## Properties NgNotification
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
 |id|`number`|`0`|Id of the notification object|
@@ -84,16 +84,16 @@ In this example the notification would disappear in 5 seconds.
 |type|`NgNotificationType`|`NgNotificationType.INFO`|Notification type [INFO, SUCCESS, WARN, ERROR]|
 |colorTheme|`any`|Color Theme which defines the colors which are used for the different notification types|
 
-## Methods
+# Methods
 
-### Methods NgExtensionNotificationProvider
+## Methods NgExtensionNotificationProvider
 
 |Method|Return Type|Description|
 |------|-----------|-----------|
 |`raiseNotification(notification: NgNotification)`|`number`|Raise a new notification and return the generated id of the object.|
 |`removeNotification(id: number)`|`void`|Remove a notification element by its given id.|
 
-## Color scheme
+# Color scheme
 
 Also the color scheme is customizable.  
 There is already a defined color scheme which is applied out of the box.
