@@ -1,21 +1,25 @@
-# Notification Component
+# NotificationComponent
 
-## Overview
-
-The notification component can be used to display notiications on the page.  
+The notification component can be used to display notifications on the page.  
 The notifications will be displayed on the right bottom corner of the page and stack up to the top.
 They can contain as many text you want.
-
+ 
 ## Usage
 
-### Setup
+```html
+    `<ng-notification [width]="400"></ng-notification>`
+```
 
-To use this component, you have to add the following tag to your HTML code.  
-`<ng-notification></ng-notification>`
+```typescript
+export class MyComponent{
 
-In your component class you can use the injectable `NotificationComponent` class to raise notifications.
+  constructor(public notificationProvider: NgExtensionNotificationProvider) {
+  }
 
-### Raising notifications
+}
+```
+
+### Example: raise notifications
 
 To raise a notification, you have to create a new `NgNotification` object and pass this to the `NgExtensionNotificationProvider.raiseNotification` method.
 
@@ -24,7 +28,7 @@ In this example the `permanent` proeprty is set to true, so the notification wil
 
 The closing icon can be customized. It can be any icon which is found in the Angular [Material Icon Set](https://material.io/resources/icons)
 
-```javascript
+```typescript
   public raise(): void{
     let notification = new NgNotification();
     notification.type = NgNotificationType.SUCCESS;
@@ -40,7 +44,7 @@ The closing icon can be customized. It can be any icon which is found in the Ang
 In this example the `permaent` property is set to false, so the notification will disappear after the given time in milliseconds.
 In this example the notification would disappear in 5 seconds.
 
-```javascript
+```typescript
   public raise(): void{
     let notification = new NgNotification();
     notification.type = NgNotificationType.SUCCESS;
@@ -54,18 +58,42 @@ In this example the notification would disappear in 5 seconds.
   }
 ```
 
-
 ## Properties
 
-### Width
+### Properties NgNotificationComponent
 
-You can customize the width in pixels of your notifications directly in the HTML tag.
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|width|`number`|`200`|Width of notifications|
 
-`<ng-notification [width]="350"></ng-notification>`
+### Properties NgExtensionNotificationProvider
 
-In this case you set the width of the notifications to 350px.
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|notificationElements|`Array<NgNotification>`|`[]`|All current displayed notifications.|
 
-### Color scheme
+### Properties NgNotification
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|id|`number`|`0`|Id of the notification object|
+|title|`string`|`"Notification"`|Title of the notification|
+|closeIcon|`string`|`"clear"`|Closing icon for notification|
+|text|`string`|`"This is a notification"`|Text of notification|
+|permanent|`boolean`|`false`|Notification keeps showing until user closes it|
+|duration|`number`|`3500`|Only when `permanent == false`. Time of notification visible in ms|
+|type|`NgNotificationType`|`NgNotificationType.INFO`|Notification type [INFO, SUCCESS, WARN, ERROR]|
+|colorTheme|`any`|Color Theme which defines the colors which are used for the different notification types|
+
+## Methods
+
+### Methods NgExtensionNotificationProvider
+
+|Method|Return Type|Description|
+|------|-----------|-----------|
+|`raiseNotification(notification: NgNotification)`|`number`|Raise a new notification and return the generated id of the object.|
+|`removeNotification(id: number)`|`void`|Remove a notification element by its given id.|
+
+## Color scheme
 
 Also the color scheme is customizable.  
 There is already a defined color scheme which is applied out of the box.
@@ -98,7 +126,3 @@ const ColorTheme = [
   }
 ];
 ```
-
-Whe setting up a new notificaiton object, you can set the `colorTheme` property to your customized theme.
-
-### 

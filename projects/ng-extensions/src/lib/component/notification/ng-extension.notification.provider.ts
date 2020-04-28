@@ -3,10 +3,18 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class NgExtensionNotificationProvider{
 
-  public notificationElements: Array<NgNotification>;
+  private _notificationElements: Array<NgNotification>;
 
   constructor() {
     this.notificationElements = new Array<NgNotification>();
+  }
+
+  get notificationElements(): Array<NgNotification> {
+    return this._notificationElements;
+  }
+
+  set notificationElements(value: Array<NgNotification>) {
+    this._notificationElements = value;
   }
 
   public raiseNotification(notification: NgNotification): number{
@@ -19,7 +27,7 @@ export class NgExtensionNotificationProvider{
     return notification.id
   }
 
-  public removeNotification(id: number){
+  public removeNotification(id: number): void{
     this.notificationElements = this.notificationElements.filter(o => o.id != id);
   }
 
