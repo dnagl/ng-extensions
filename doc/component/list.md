@@ -82,6 +82,7 @@ export class MyComponent {
 |show|`boolean`|`true`|Collection is visible|
 |backgroundColor|`string`|`#ffffff`|Background color of collection|
 |backgroundColorTitle|`string`|`#00E676`|Background color of collection title|
+|colorTitle|`string`|`#000000`|Font color for title|
 |listElements|`Array<NgListElement>`|`[]`|Elements in collection|
 
 ## Properties NgExtensionListProvider
