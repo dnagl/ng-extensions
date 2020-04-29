@@ -5,13 +5,15 @@ export class NgListElement{
   private _content: string;
   private _show: boolean;
   private _actionItems: Array<NgListElementAction>;
+  private _data: any;
 
-  constructor(id: number = 0, title: string = '', content: string = '', show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>()) {
+  constructor(id: number = 0, title: string = '', content: string = '', show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
     this._id = id;
     this._title = title;
     this._content = content;
     this._show = show;
     this._actionItems = actionItems;
+    this._data = data;
   }
 
   get id(): number {
@@ -57,6 +59,14 @@ export class NgListElement{
   public addActionItem(action: NgListElementAction): void{
     this.actionItems.push(action);
   }
+
+  get data(): any {
+    return this._data;
+  }
+
+  set data(value: any) {
+    this._data = value;
+  }
 }
 
 export class NgListElementAction{
@@ -64,12 +74,14 @@ export class NgListElementAction{
   private _isIcon: boolean;
   private _content: string;
   private _color: string;
+  private _show: boolean;
   private _callback: {(elementAction: NgListElementAction): void;};
 
-  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', callback: { (elementAction: NgListElementAction): void } = null) {
+  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', show: boolean = true, callback: { (elementAction: NgListElementAction): void } = null) {
     this._isIcon = isIcon;
     this._content = content;
     this._color = color;
+    this._show = show;
     this._callback = callback;
   }
 
@@ -89,16 +101,24 @@ export class NgListElementAction{
     this._content = value;
   }
 
-  get callback(): { (elementAction: NgListElementAction): void } {
-    return this._callback;
-  }
-
   get color(): string {
     return this._color;
   }
 
   set color(value: string) {
     this._color = value;
+  }
+
+  get show(): boolean {
+    return this._show;
+  }
+
+  set show(value: boolean) {
+    this._show = value;
+  }
+
+  get callback(): { (elementAction: NgListElementAction): void } {
+    return this._callback;
   }
 
   set callback(value: { (elementAction: NgListElementAction): void }) {

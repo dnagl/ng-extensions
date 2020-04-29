@@ -59,6 +59,7 @@ export class MyComponent {
 |content|`string`|`''`|Content of the list element. Can be null.|
 |show|`boolean`|`true`|Element is visible.|
 |actionItems|`Array<NgListElementAction>`|`[]`|Holds visible element actions|
+|data|`any`|`null`|Contains custom data which can be needed when action gets executed|
 
 ## Properties NgListElementAction
 
@@ -67,6 +68,7 @@ export class MyComponent {
 |isIcon|`boolean`|`true`|If Material Icons should be used|
 |content|`string`|`''`|Icon name or text|
 |color|`string`|`''`|Font color of content|
+|show|`boolean`|`true`|Element is visible.|
 |callback|`(elementAction: NgListElementAction): void`|`null`|Callback which gets called when button is pressed|
 
 ## Properties NgListCollection

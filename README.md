@@ -13,7 +13,7 @@ A demo project with all the features described can be found here: [Demo Project]
 
 ## Docs
 
-The documentation can be found in the doc directory in the repository.
+The documentation can be found in the doc directory in the repository. (GitHub)[https://github.com/dnagl/ng-extensions/tree/master/doc]
 
 ## Issues, Bugs and Contribution
 
