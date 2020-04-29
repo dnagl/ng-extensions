@@ -1,4 +1,4 @@
-export class NgListElement{
+export class NgListElement {
 
   private _id: number;
   private _title: string;
@@ -56,7 +56,7 @@ export class NgListElement{
     this._actionItems = value;
   }
 
-  public addActionItem(action: NgListElementAction): void{
+  public addActionItem(action: NgListElementAction): void {
     action.parent = this;
     this.actionItems.push(action);
   }
@@ -70,13 +70,13 @@ export class NgListElement{
   }
 }
 
-export class NgListElementAction{
+export class NgListElementAction {
 
   private _isIcon: boolean;
   private _content: string;
   private _color: string;
   private _show: boolean;
-  private _callback: {(elementAction: NgListElementAction): void;};
+  private _callback: { (elementAction: NgListElementAction): void; };
   private _parent: NgListElement;
 
   constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', show: boolean = true, callback: { (elementAction: NgListElementAction): void } = null, parent: NgListElement = null) {
@@ -136,12 +136,12 @@ export class NgListElementAction{
     this._parent = value;
   }
 
-  public execute(){
+  public execute() {
     this.callback(this);
   }
 }
 
-export class NgListCollection{
+export class NgListCollection {
 
   private _id: number;
   private _title: string;
@@ -152,7 +152,7 @@ export class NgListCollection{
   private _colorTitle: string;
   private _listElements: Array<NgListElement>;
 
-  constructor(id: number = 0, title: string = '', expand: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string ='#212121', listElements: Array<NgListElement> = new Array<NgListElement>()) {
+  constructor(id: number = 0, title: string = '', expand: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string = '#212121', listElements: Array<NgListElement> = new Array<NgListElement>()) {
     this._id = id;
     this._title = title;
     this._expand = expand;
@@ -185,7 +185,7 @@ export class NgListCollection{
 
   set expand(value: boolean) {
     this._expand = value;
-    this._listElements.forEach( element => element.show = this._expand);
+    this._listElements.forEach(element => element.show = this._expand);
   }
 
   get show(): boolean {
@@ -228,16 +228,16 @@ export class NgListCollection{
     this._listElements = value;
   }
 
-  public addListElement(listElement: NgListElement): void{
+  public addListElement(listElement: NgListElement): void {
     listElement.id = this._listElements.length == 0 ? 0 : this._listElements[this._listElements.length - 1].id + 1;
     this._listElements.push(listElement);
   }
 
-  public removeListElement(listCollection: NgListElement): void{
+  public removeListElement(listCollection: NgListElement): void {
     this.listElements = this.listElements.filter(o => o.id != listCollection.id);
   }
 
-  public cleanElements(): void{
+  public cleanElements(): void {
     this.listElements = new Array<NgListElement>();
   }
 }

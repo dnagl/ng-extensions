@@ -9,8 +9,8 @@ import {NgExtensionNavigationProvider} from "./component/navigation/ng-extension
 import {NgNavigationLayoutComponent} from "./component/navigation/layout/ng-extension.navigation.layout.component";
 import {RouterModule} from "@angular/router";
 import {NgExtensionNotificationProvider} from "./component/notification/ng-extension.notification.provider";
-import { LocalStorageProvider } from './storage/ng-extension.storage.local.provider';
-import { SessionStorageProvider } from './storage/ng-extension.storage.session.provider';
+import {LocalStorageProvider} from './storage/ng-extension.storage.local.provider';
+import {SessionStorageProvider} from './storage/ng-extension.storage.session.provider';
 import {NgListElementComponent} from "./component/list/element/ng-extension.list.element.component";
 import {NgListCollectionComponent} from "./component/list/collection/ng-extension.list.collection.component";
 import {NgExtensionListProvider} from "./component/list/ng-extension.list.provider";
@@ -49,6 +49,6 @@ import {NgListGalleryComponent} from "./component/list/gallery/ng-extension.list
     SessionStorageProvider
   ]
 })
-export class NgExtensionModule{
+export class NgExtensionModule {
 
 }

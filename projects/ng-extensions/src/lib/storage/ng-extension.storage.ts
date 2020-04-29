@@ -1,21 +1,23 @@
-export abstract class AbstractStorage{
+export abstract class AbstractStorage {
 
-    protected _valueMap:Map<string, string>;
+  protected _valueMap: Map<string, string>;
 
-    public abstract init(): void;
-    public abstract setValue(key: string, value: string): void;
-    public abstract getValue(key: string): string;
+  public abstract init(): void;
 
-    constructor(){
-        this.init();
-    }
+  public abstract setValue(key: string, value: string): void;
 
-    get navigationElements(): Map<string, string> {
-        return this._valueMap;
-    }
-    
-    set navigationElements(value: Map<string, string>) {
-        this._valueMap = value;
-    }
+  public abstract getValue(key: string): string;
+
+  constructor() {
+    this.init();
+  }
+
+  get navigationElements(): Map<string, string> {
+    return this._valueMap;
+  }
+
+  set navigationElements(value: Map<string, string>) {
+    this._valueMap = value;
+  }
 
 }

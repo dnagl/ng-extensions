@@ -15,7 +15,7 @@ export class NgNavigationSideComponent {
   constructor(public navigationProvider: NgExtensionNavigationProvider, private router: Router) {
   }
 
-  public getComponentPath(component: Component): string{
+  public getComponentPath(component: Component): string {
     return '/' + this.router.config.find(o => o.component == component).path;
   }
 

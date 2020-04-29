@@ -9,7 +9,7 @@ import {NgExtensionNotificationProvider} from "./ng-extension.notification.provi
     './ng-extension.notification.component.scss'
   ]
 })
-export class NgNotificationComponent{
+export class NgNotificationComponent {
 
   @Input() width: number = 200;
 

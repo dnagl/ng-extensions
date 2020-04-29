@@ -10,12 +10,12 @@ import {NgListCollection} from "../ng-extension.list.model";
     './ng-extension.list.collection.component.scss'
   ]
 })
-export class NgListCollectionComponent{
+export class NgListCollectionComponent {
 
   private _id: number;
   public listCollection: NgListCollection;
 
-  constructor(public listProvider:NgExtensionListProvider) {
+  constructor(public listProvider: NgExtensionListProvider) {
   }
 
   get id(): number {

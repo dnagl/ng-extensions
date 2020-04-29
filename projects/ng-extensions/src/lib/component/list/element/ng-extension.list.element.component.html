@@ -13,11 +13,17 @@
   <div
     *ngIf="listElement.actionItems != null && listElement.actionItems.length > 0"
     class="ng-extension-flex-row-center ng-extension-list-element-action-container">
-      <div
-        *ngFor="let action of listElement.actionItems"
-        class="ng-extension-flex-column-center ng-extension-list-element-action">
-        <button *ngIf="action.show && action.isIcon" mat-icon-button [style.color]="action.color" (click)="action.execute()"><mat-icon>{{action.content}}</mat-icon></button>
-        <button *ngIf="action.show && !action.isIcon" mat-mini-fab [style.color]="action.color" (click)="action.execute()"><mat-icon>{{action.content}}</mat-icon></button>
-      </div>
+    <div
+      *ngFor="let action of listElement.actionItems"
+      class="ng-extension-flex-column-center ng-extension-list-element-action">
+      <button *ngIf="action.show && action.isIcon" mat-icon-button [style.color]="action.color"
+              (click)="action.execute()">
+        <mat-icon>{{action.content}}</mat-icon>
+      </button>
+      <button *ngIf="action.show && !action.isIcon" mat-mini-fab [style.color]="action.color"
+              (click)="action.execute()">
+        <mat-icon>{{action.content}}</mat-icon>
+      </button>
+    </div>
   </div>
 </div>

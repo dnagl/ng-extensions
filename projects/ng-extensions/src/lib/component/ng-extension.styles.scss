@@ -1,46 +1,57 @@
-.ng-extension-flex-start{
+.ng-extension-flex-start {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.ng-extension-flex-center{
+
+.ng-extension-flex-center {
   justify-content: center;
   align-items: center;
 }
-.ng-extension-flex-space-between{
+
+.ng-extension-flex-space-between {
   justify-content: space-between;
 }
-.ng-extension-flex{
+
+.ng-extension-flex {
   @extend .ng-extension-flex-start;
   display: flex;
 }
-.ng-extension-flex-row{
+
+.ng-extension-flex-row {
   @extend .ng-extension-flex;
   flex-flow: row;
 }
-.ng-extension-flex-column{
+
+.ng-extension-flex-column {
   @extend .ng-extension-flex;
   flex-flow: column;
 }
-.ng-extension-flex-row-center{
+
+.ng-extension-flex-row-center {
   @extend .ng-extension-flex-row;
   @extend .ng-extension-flex-center;
 }
-.ng-extension-flex-column-center{
+
+.ng-extension-flex-column-center {
   @extend .ng-extension-flex-column;
   @extend .ng-extension-flex-center;
 }
-.ng-extension-flex-row-space-between{
+
+.ng-extension-flex-row-space-between {
   @extend .ng-extension-flex-row-center;
   @extend .ng-extension-flex-space-between;
 }
-.ng-extension-flex-column-space-between{
+
+.ng-extension-flex-column-space-between {
   @extend .ng-extension-flex-column-center;
   @extend .ng-extension-flex-space-between;
 }
-.ng-extension-no-outline{
+
+.ng-extension-no-outline {
   outline: none;
 }
-.ng-extension-no-select{
+
+.ng-extension-no-select {
   @extend .ng-extension-no-outline;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

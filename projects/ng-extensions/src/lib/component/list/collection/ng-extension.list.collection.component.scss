@@ -1,28 +1,32 @@
-.ng-extension-list-collection{
+.ng-extension-list-collection {
   height: 100%;
   flex: 1;
   margin: 8px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.ng-extension-list-collection-head{
+
+.ng-extension-list-collection-head {
   width: 100%;
   font-size: 22px;
   font-weight: 600;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.ng-extension-list-collection-head > span{
+
+.ng-extension-list-collection-head > span {
   margin: 5px 0 5px 15px;
 }
-.ng-extension-list-collection-body{
+
+.ng-extension-list-collection-body {
   width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow-x: hidden;
   overflow-y: auto;
 }
-.ng-extension-list-collection-body > ng-list-element{
+
+.ng-extension-list-collection-body > ng-list-element {
   width: 100%;
   margin-top: 4px;
 }

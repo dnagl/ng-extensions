@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 
-export class NgNavigationContext{
+export class NgNavigationContext {
 
   private _navigationElements: Array<NgNavigationElement>;
   private _navigationBrandElement: NgNavigationBrandElement;
@@ -28,7 +28,7 @@ export class NgNavigationContext{
   }
 }
 
-export class NgNavigationElement{
+export class NgNavigationElement {
 
   private _name: string;
   private _matIcon: string;
@@ -75,7 +75,7 @@ export class NgNavigationElement{
   }
 }
 
-export class NgNavigationBrandElement{
+export class NgNavigationBrandElement {
 
   private _image: boolean;
   private _content: string;

@@ -1,7 +1,9 @@
 <div class="ng-extension-flex-column ng-extension-navigation-side-container">
-  <ng-navigation-top *ngIf="navigationProvider.navigationContextTop != null" class="ng-extension-flex-row ng-extension-navigation-layout-top"></ng-navigation-top>
+  <ng-navigation-top *ngIf="navigationProvider.navigationContextTop != null"
+    class="ng-extension-flex-row ng-extension-navigation-layout-top"></ng-navigation-top>
   <div class="ng-extension-flex-row ng-extension-navigation-layout-content">
-    <ng-navigation-side *ngIf="navigationProvider.navigationContextSide != null" class="ng-extension-navigation-layout-side"></ng-navigation-side>
+    <ng-navigation-side *ngIf="navigationProvider.navigationContextSide != null"
+      class="ng-extension-navigation-layout-side"></ng-navigation-side>
     <div class="ng-extension-navigation-layout-router-outlet">
       <router-outlet></router-outlet>
     </div>

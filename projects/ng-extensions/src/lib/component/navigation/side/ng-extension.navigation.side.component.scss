@@ -1,27 +1,32 @@
-.ng-extension-navigation-side-container{
+.ng-extension-navigation-side-container {
   height: 100%;
   border-right: 1px solid #dedede;
   align-items: center !important;
 }
-.ng-extension-navigation-side-element{
+
+.ng-extension-navigation-side-element {
   width: 100%;
   font-size: 25px;
   margin-bottom: 23px;
   cursor: pointer;
   justify-content: flex-start !important;
 }
-.ng-extension-navigation-side-element > mat-icon{
+
+.ng-extension-navigation-side-element > mat-icon {
   margin-right: 8px;
   margin-left: 8px;
 }
-.ng-extension-navigation-side-brand{
+
+.ng-extension-navigation-side-brand {
   margin-bottom: 22px;
   padding: 10px;
   border-bottom: 1px solid #dedede;
 }
-.ng-extension-navigation-side-brand > img{
+
+.ng-extension-navigation-side-brand > img {
   max-height: 100%;
 }
-.ng-extension-navigation-side-brand > span{
+
+.ng-extension-navigation-side-brand > span {
   font-size: 30px;
 }

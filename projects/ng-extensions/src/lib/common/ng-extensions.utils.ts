@@ -1,3 +1,3 @@
-export class NgExtensionsUtils{
+export class NgExtensionsUtils {
 
 }

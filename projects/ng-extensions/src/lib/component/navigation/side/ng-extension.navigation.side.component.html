@@ -1,9 +1,12 @@
-<div class="ng-extension-flex-column ng-extension-navigation-side-container" *ngIf="navigationProvider.navigationContextSide != null">
+<div class="ng-extension-flex-column ng-extension-navigation-side-container"
+     *ngIf="navigationProvider.navigationContextSide != null">
   <div
     *ngIf="navigationProvider.navigationContextSide.navigationBrandElement != null && navigationProvider.navigationContextSide.navigationBrandElement.content != null"
     class="ng-extension-flex-column-center ng-extension-no-select ng-extension-navigation-side-brand">
-    <img *ngIf="navigationProvider.navigationContextSide.navigationBrandElement.image" alt="" [src]="navigationProvider.navigationContextSide.navigationBrandElement.content">
-    <span *ngIf="!navigationProvider.navigationContextSide.navigationBrandElement.image">{{navigationProvider.navigationContextSide.navigationBrandElement.content}}</span>
+    <img *ngIf="navigationProvider.navigationContextSide.navigationBrandElement.image" alt=""
+         [src]="navigationProvider.navigationContextSide.navigationBrandElement.content">
+    <span
+      *ngIf="!navigationProvider.navigationContextSide.navigationBrandElement.image">{{navigationProvider.navigationContextSide.navigationBrandElement.content}}</span>
   </div>
   <div
     *ngFor="let navigationElement of navigationProvider.navigationContextSide.navigationElements"

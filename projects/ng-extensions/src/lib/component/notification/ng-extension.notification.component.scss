@@ -1,4 +1,4 @@
-.ng-extension-notification-container{
+.ng-extension-notification-container {
   position: absolute;
   z-index: 100;
   right: 3vw;
@@ -6,12 +6,14 @@
   height: calc(100% - 1vh);
   flex-flow: column-reverse;
 }
-.ng-extension-notification{
+
+.ng-extension-notification {
   margin-top: 15px;
   width: 100%;
   color: #ffffff;
 }
-.ng-extension-notification-title-wrapper{
+
+.ng-extension-notification-title-wrapper {
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -19,18 +21,22 @@
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
 .ng-extension-notification-title {
   margin-left: 5px;
 }
-.ng-extension-notification-title-icon{
+
+.ng-extension-notification-title-icon {
   cursor: pointer;
 }
-.ng-extension-notification-text{
+
+.ng-extension-notification-text {
   width: 100%;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   font-size: 16px;
 }
-.ng-extension-notification-text > span{
+
+.ng-extension-notification-text > span {
   margin: 5px;
 }

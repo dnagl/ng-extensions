@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {NgNavigationContext} from "./ng-extension.navigation.model";
 
 @Injectable()
-export class NgExtensionNavigationProvider{
+export class NgExtensionNavigationProvider {
 
   private _navigationContextTop: NgNavigationContext;
   private _navigationContextSide: NgNavigationContext;

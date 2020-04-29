@@ -1,7 +1,7 @@
 <div
   *ngIf="listCollection != null && listCollection.show"
   [style.background-color]="listCollection.backgroundColor"
-  class="ng-extension-flex-column-center ng-extension-no-select ng-extension-list-collection" >
+  class="ng-extension-flex-column-center ng-extension-no-select ng-extension-list-collection">
   <div
     [style.background-color]="listCollection.backgroundColorTitle"
     [style.color]="listCollection.colorTitle"
@@ -9,10 +9,14 @@
     <span>{{listCollection.title}}</span>
     <button
       *ngIf="listCollection.expand" (click)="listCollection.expand = false"
-      mat-icon-button color="primary"><mat-icon>keyboard_arrow_up</mat-icon></button>
+      mat-icon-button color="primary">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
     <button
       *ngIf="!listCollection.expand" (click)="listCollection.expand = true"
-      mat-icon-button color="primary"><mat-icon>keyboard_arrow_down</mat-icon></button>
+      mat-icon-button color="primary">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
   </div>
   <div
     *ngIf="listCollection.expand && listCollection.listElements != null && listCollection.listElements.length > 0"

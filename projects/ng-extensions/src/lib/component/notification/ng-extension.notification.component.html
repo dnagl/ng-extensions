@@ -1,10 +1,15 @@
-<div class="ng-extension-no-select ng-extension-flex-column ng-extension-notification-container" [style.width.px]="width">
-  <div class="ng-extension-flex-column-center ng-extension-notification" *ngFor="let notification of notificationProvider.notificationElements">
-    <div class="ng-extension-flex-row ng-extension-notification-title-wrapper" [ngStyle]="{'background-color' : notification.colorTheme.backgroundTitle}">
+<div class="ng-extension-no-select ng-extension-flex-column ng-extension-notification-container"
+     [style.width.px]="width">
+  <div class="ng-extension-flex-column-center ng-extension-notification"
+       *ngFor="let notification of notificationProvider.notificationElements">
+    <div class="ng-extension-flex-row ng-extension-notification-title-wrapper"
+         [ngStyle]="{'background-color' : notification.colorTheme.backgroundTitle}">
       <span class="ng-extension-notification-title">{{notification.title}}</span>
-      <mat-icon class="ng-extension-notification-title-icon" (click)="notificationProvider.removeNotification(notification.id)">{{notification.closeIcon}}</mat-icon>
+      <mat-icon class="ng-extension-notification-title-icon"
+                (click)="notificationProvider.removeNotification(notification.id)">{{notification.closeIcon}}</mat-icon>
     </div>
-    <div class="ng-extension-flex-row ng-extension-notification-text" [ngStyle]="{'background-color' : notification.colorTheme.backgroundText}">
+    <div class="ng-extension-flex-row ng-extension-notification-text"
+         [ngStyle]="{'background-color' : notification.colorTheme.backgroundText}">
       <span>{{notification.text}}</span>
     </div>
   </div>

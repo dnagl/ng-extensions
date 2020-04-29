@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 
 @Injectable()
-export class NgExtensionNotificationProvider{
+export class NgExtensionNotificationProvider {
 
   private _notificationElements: Array<NgNotification>;
 
@@ -17,23 +17,25 @@ export class NgExtensionNotificationProvider{
     this._notificationElements = value;
   }
 
-  public raiseNotification(notification: NgNotification): number{
+  public raiseNotification(notification: NgNotification): number {
     notification.id = Math.floor(Math.random() * 100) + 1;
     notification.colorTheme = ColorTheme.find(o => o.type == notification.type);
     this.notificationElements.push(notification);
-    if(!notification.permanent){
-      setTimeout(() => {this.removeNotification(notification.id);}, notification.duration);
+    if (!notification.permanent) {
+      setTimeout(() => {
+        this.removeNotification(notification.id);
+      }, notification.duration);
     }
     return notification.id
   }
 
-  public removeNotification(id: number): void{
+  public removeNotification(id: number): void {
     this.notificationElements = this.notificationElements.filter(o => o.id != id);
   }
 
 }
 
-export class NgNotification{
+export class NgNotification {
 
   private _id: number = 0;
   private _title: string = "Notification";
@@ -109,7 +111,7 @@ export class NgNotification{
   }
 }
 
-export enum NgNotificationType{
+export enum NgNotificationType {
   INFO,
   SUCCESS,
   WARN,

@@ -9,7 +9,7 @@ import {NgListElement} from "../ng-extension.list.model";
     './ng-extension.list.element.component.scss'
   ]
 })
-export class NgListElementComponent{
+export class NgListElementComponent {
 
   @Input() public height: string = "fit-content";
   @Input() public listElement: NgListElement;

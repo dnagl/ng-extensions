@@ -104,6 +104,6 @@ import {MatCommonModule} from "@angular/material/core";
     MatPaginatorModule
   ]
 })
-export class AngularMaterialModule{
+export class AngularMaterialModule {
 
 }
