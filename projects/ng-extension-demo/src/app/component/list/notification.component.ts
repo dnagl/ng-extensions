@@ -25,13 +25,18 @@ export class ListComponent{
 
       for(let i = 0; i < 18; i++){
         let element = new NgListElement();
-        //element.title = "Hello World";
         element.content = "Hello Element!";
 
         let editActionElement = new NgListElementAction();
-        let deleteActionElement = new NgListElementAction();
+        editActionElement.parent = element;
         editActionElement.content = 'edit';
-        deleteActionElement.content = 'edit';
+        editActionElement.callback = (o) => console.log(o.parent.id);
+
+        let deleteActionElement = new NgListElementAction();
+        deleteActionElement.parent = element;
+        deleteActionElement.content = 'delete';
+        editActionElement.callback = (o) => console.log(o.parent.id);
+
         element.addActionItem(editActionElement);
         element.addActionItem(deleteActionElement);
 
