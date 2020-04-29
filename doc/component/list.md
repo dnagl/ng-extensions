@@ -70,6 +70,7 @@ export class MyComponent {
 |color|`string`|`''`|Font color of content|
 |show|`boolean`|`true`|Element is visible.|
 |callback|`(elementAction: NgListElementAction): void`|`null`|Callback which gets called when button is pressed|
+|parent|`NgListElement`|`null`|Parent `NgListElement` of action object|
 
 ## Properties NgListCollection
 

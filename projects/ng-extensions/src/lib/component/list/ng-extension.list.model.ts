@@ -57,6 +57,7 @@ export class NgListElement{
   }
 
   public addActionItem(action: NgListElementAction): void{
+    action.parent = this;
     this.actionItems.push(action);
   }
 
@@ -76,13 +77,15 @@ export class NgListElementAction{
   private _color: string;
   private _show: boolean;
   private _callback: {(elementAction: NgListElementAction): void;};
+  private _parent: NgListElement;
 
-  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', show: boolean = true, callback: { (elementAction: NgListElementAction): void } = null) {
+  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', show: boolean = true, callback: { (elementAction: NgListElementAction): void } = null, parent: NgListElement = null) {
     this._isIcon = isIcon;
     this._content = content;
     this._color = color;
     this._show = show;
     this._callback = callback;
+    this._parent = parent;
   }
 
   get isIcon(): boolean {
@@ -123,6 +126,14 @@ export class NgListElementAction{
 
   set callback(value: { (elementAction: NgListElementAction): void }) {
     this._callback = value;
+  }
+
+  get parent(): NgListElement {
+    return this._parent;
+  }
+
+  set parent(value: NgListElement) {
+    this._parent = value;
   }
 
   public execute(){
