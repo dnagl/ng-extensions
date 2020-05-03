@@ -26,6 +26,10 @@ jobs:
         run:
           npm run-script build-prod
 
+      - name: Run Tests
+        run:
+          npm run-script test-headless ng-extensions
+
       - name: Publish NPM package
         run: npm publish ./dist/ng-extensions
         env:

@@ -35,3 +35,7 @@ jobs:
       - name: Run Build
         run:
           npm run-script build-prod
+
+      - name: Run Tests
+        run:
+          npm run-script test-headless ng-extensions
