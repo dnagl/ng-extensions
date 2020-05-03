@@ -15,6 +15,7 @@ import {NgListElementComponent} from "./component/list/element/ng-extension.list
 import {NgListCollectionComponent} from "./component/list/collection/ng-extension.list.collection.component";
 import {NgExtensionListProvider} from "./component/list/ng-extension.list.provider";
 import {NgListGalleryComponent} from "./component/list/gallery/ng-extension.list.gallery.component";
+import {NgExtensionPipeModule} from "./pipe/ng-extension.pipe.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {NgListGalleryComponent} from "./component/list/gallery/ng-extension.list
     CommonModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    RouterModule
+    RouterModule,
+    NgExtensionPipeModule
   ],
   exports: [
     NgListCollectionComponent,
@@ -39,7 +41,8 @@ import {NgListGalleryComponent} from "./component/list/gallery/ng-extension.list
     NgNotificationComponent,
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
-    NgNavigationTopComponent
+    NgNavigationTopComponent,
+    NgExtensionPipeModule
   ],
   providers: [
     NgExtensionListProvider,

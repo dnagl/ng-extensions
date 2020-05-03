@@ -1,6 +1,7 @@
 # NgExtensions
 
 ![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
+[![NPM Version](https://img.shields.io/npm/v/ng-extensions.svg)](https://www.npmjs.com/package/ng-extensions)
 [![Open Source Helpers](https://www.codetriage.com/dnagl/ng-extensions/badges/users.svg)](https://www.codetriage.com/dnagl/ng-extensions)
 
 ## Project
@@ -10,6 +11,10 @@ This library provides multiple controls, pipes and providers which can be used i
 ## Demo
 
 A demo project with all the features described can be found here: [Demo Project](https://dnagl.github.io/ng-extensions/)
+
+## Docs
+
+The documentation can be found in the doc directory in the repository. (GitHub)[https://github.com/dnagl/ng-extensions/tree/master/doc]
 
 ## Issues, Bugs and Contribution
 

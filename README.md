@@ -1,6 +1,7 @@
 # NgExtensions
 
 ![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
+[![NPM Version](https://img.shields.io/npm/v/ng-extensions.svg)](https://www.npmjs.com/package/ng-extensions)
 [![Open Source Helpers](https://www.codetriage.com/dnagl/ng-extensions/badges/users.svg)](https://www.codetriage.com/dnagl/ng-extensions)
 
 ## Project
