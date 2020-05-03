@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {NgListElement} from "../ng-extension.list.model";
+import {Component, Input} from '@angular/core';
+import {NgListElement} from '../ng-extension.list.model';
 
 @Component({
   selector: 'ng-list-element',
@@ -11,7 +11,7 @@ import {NgListElement} from "../ng-extension.list.model";
 })
 export class NgListElementComponent {
 
-  @Input() public height: string = "fit-content";
+  @Input() public height = 'fit-content';
   @Input() public listElement: NgListElement;
 
   constructor() {

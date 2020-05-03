@@ -1,6 +1,6 @@
-import {Component} from "@angular/core";
-import {NgExtensionNavigationProvider} from "../ng-extension.navigation.provider";
-import {Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {NgExtensionNavigationProvider} from '../ng-extension.navigation.provider';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'ng-navigation-top',
@@ -16,7 +16,7 @@ export class NgNavigationTopComponent {
   }
 
   public getComponentPath(component: Component): string {
-    return '/' + this.router.config.find(o => o.component == component).path;
+    return '/' + this.router.config.find(o => o.component === component).path;
   }
 
 }

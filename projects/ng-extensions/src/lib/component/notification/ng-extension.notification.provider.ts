@@ -1,4 +1,4 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class NgExtensionNotificationProvider {
@@ -19,30 +19,30 @@ export class NgExtensionNotificationProvider {
 
   public raiseNotification(notification: NgNotification): number {
     notification.id = Math.floor(Math.random() * 100) + 1;
-    notification.colorTheme = ColorTheme.find(o => o.type == notification.type);
+    notification.colorTheme = ColorTheme.find(o => o.type === notification.type);
     this.notificationElements.push(notification);
     if (!notification.permanent) {
       setTimeout(() => {
         this.removeNotification(notification.id);
       }, notification.duration);
     }
-    return notification.id
+    return notification.id;
   }
 
   public removeNotification(id: number): void {
-    this.notificationElements = this.notificationElements.filter(o => o.id != id);
+    this.notificationElements = this.notificationElements.filter(o => o.id !== id);
   }
 
 }
 
 export class NgNotification {
 
-  private _id: number = 0;
-  private _title: string = "Notification";
-  private _closeIcon: string = "clear";
-  private _text: string = "This is a notification";
-  private _permanent: boolean = false;
-  private _duration: number = 3500;
+  private _id = 0;
+  private _title = 'Notification';
+  private _closeIcon = 'clear';
+  private _text = 'This is a notification';
+  private _permanent = false;
+  private _duration = 3500;
   private _type: NgNotificationType = NgNotificationType.INFO;
   private _colorTheme: any;
 
@@ -121,26 +121,26 @@ export enum NgNotificationType {
 const ColorTheme = [
   {
     type: NgNotificationType.INFO,
-    backgroundTitle: "#0052CC",
-    backgroundText: "#0068FF",
-    fontColor: "#ffffff"
+    backgroundTitle: '#0052CC',
+    backgroundText: '#0068FF',
+    fontColor: '#ffffff'
   },
   {
     type: NgNotificationType.SUCCESS,
-    backgroundTitle: "#038C25",
-    backgroundText: "#04BF33",
-    fontColor: "#ffffff"
+    backgroundTitle: '#038C25',
+    backgroundText: '#04BF33',
+    fontColor: '#ffffff'
   },
   {
     type: NgNotificationType.WARN,
-    backgroundTitle: "#F2B705",
-    backgroundText: "#F2CB05",
-    fontColor: "#ffffff"
+    backgroundTitle: '#F2B705',
+    backgroundText: '#F2CB05',
+    fontColor: '#ffffff'
   },
   {
     type: NgNotificationType.ERROR,
-    backgroundTitle: "#BF0404",
-    backgroundText: "#F20505",
-    fontColor: "#ffffff"
+    backgroundTitle: '#BF0404',
+    backgroundText: '#F20505',
+    fontColor: '#ffffff'
   }
 ];

@@ -1,4 +1,4 @@
-import {async} from "@angular/core/testing";
+import {async} from '@angular/core/testing';
 import {
   flat, isArray, isEmpty, isFloat, isFunction, isInt,
   isNegative,
@@ -8,7 +8,7 @@ import {
   isUndefined,
   toLowerCase, toLowerCaseFirst,
   toUpperCase, toUpperCaseFirst
-} from "./ng-extension.utils";
+} from './ng-extension.utils';
 
 describe('NgExtension Utils', () => {
   it('isNull', async(() => {
@@ -75,7 +75,7 @@ describe('NgExtension Utils', () => {
 
   it('isArray', async(() => {
     const x = [];
-    const y = [[],[],[[],[]]];
+    const y = [[], [], [[], []]];
     const z = {};
     expect(isArray(x)).toBeTrue();
     expect(isArray(y)).toBeTrue();
@@ -83,7 +83,7 @@ describe('NgExtension Utils', () => {
   }));
 
   it('isFunction', async(() => {
-    const x = function(){return true;};
+    const x = () => true;
     const y = {};
     expect(isFunction(x)).toBeTrue();
     expect(isFunction(y)).toBeFalse();

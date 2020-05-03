@@ -2,9 +2,7 @@
  * Public API Surface of ng-extensions
  */
 
-export * from './lib/ng-extension.module'
-
-export * from './lib/common/ng-extensions.utils';
+export * from './lib/ng-extension.module';
 
 export * from './lib/component/list/ng-extension.list.model';
 export * from './lib/component/list/ng-extension.list.provider';

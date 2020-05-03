@@ -1,4 +1,4 @@
-import {NgModule} from "@angular/core";
+import {NgModule} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -27,10 +27,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {BrowserModule} from "@angular/platform-browser";
-import {MatCheckboxModule} from "@angular/material/checkbox";
-import {MatButtonModule} from "@angular/material/button";
-import {MatCommonModule} from "@angular/material/core";
+import {BrowserModule} from '@angular/platform-browser';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCommonModule} from '@angular/material/core';
 
 @NgModule({
   imports: [

@@ -1,7 +1,5 @@
-import {ObjectUnsubscribedError, Observable, Observer, Subject} from "rxjs";
-import {AnonymousSubject} from "rxjs/internal-compatibility";
-
-//todo: example from https://tutorialedge.net/typescript/angular/angular-websockets-tutorial/
+import {ObjectUnsubscribedError, Observable, Observer, Subject} from 'rxjs';
+import {AnonymousSubject} from 'rxjs/internal-compatibility';
 
 export abstract class WebSocketClient {
 
@@ -19,23 +17,23 @@ export abstract class WebSocketClient {
   }
 
   protected create(): Subject<MessageEvent> {
-    let ws = new WebSocket(this.url);
+    const ws = new WebSocket(this.url);
 
-    let observable = new Observable((observer: Observer<MessageEvent>) => {
+    const observable = new Observable((observer: Observer<MessageEvent>) => {
       ws.onmessage = observer.next.bind(observer);
       ws.onerror = observer.next.bind(observer);
       ws.onclose = observer.next.bind(observer);
       return ws.close.bind(ws);
     });
 
-    let observer: Observer<MessageEvent> = {
-      complete: function () {
+    const observer: Observer<MessageEvent> = {
+      complete() {
       },
-      error: function (p1: any) {
+      error(p1: any) {
       },
-      next: (data: Object) => {
+      next: (data: object) => {
         if (ws.readyState === WebSocket.OPEN) {
-          ws.send(JSON.stringify(data))
+          ws.send(JSON.stringify(data));
         }
       }
     };

@@ -1,16 +1,19 @@
 # NgExtensions
 
 ![Build](https://github.com/dnagl/ng-extensions/workflows/Build/badge.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/dnagl/ng-extensions)
+![GitHub](https://img.shields.io/github/license/dnagl/ng-extensions)
 [![NPM Version](https://img.shields.io/npm/v/ng-extensions.svg)](https://www.npmjs.com/package/ng-extensions)
-[![Open Source Helpers](https://www.codetriage.com/dnagl/ng-extensions/badges/users.svg)](https://www.codetriage.com/dnagl/ng-extensions)
+[![NPM Downloads](https://img.shields.io/npm/dt/ng-extensions)](https://www.npmjs.com/package/ng-extensions)
+![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/ng-extensions)
 
 ## Project
 
 This library provides multiple controls, pipes and providers which can be used in any Angular project.
 
-## Demo
+## Demo :construction:
 
-A demo project with all the features described can be found here: [Demo Project](https://dnagl.github.io/ng-extensions/)
+A demo project will be available soon ...
 
 ## Docs
 
@@ -23,13 +26,20 @@ just create a new issue for this project. If you are confident that you are able
 
 ## Features
 
-> todo -> completing soon
-
 The following features can be found in this project.
 
 * Components
+  * [List](doc/component/list.md)
+  * [Navigation](doc/component/navigation.md)
+  * [Notification](doc/component/notification.md)
 * Pipes
+  * [Arrays](doc/pipe/array.md)
+  * [Common](doc/pipe/common.md)
+  * [String](doc/pipe/string.md)
+  * [Type](doc/pipe/type.md)
 * Providers
+  * NgLocalStorageProvider
+  * NgSessionStorageProvider
 * Style
   * Many reusable scss classes for flexbloxes, navigation elements, ...
 
@@ -38,7 +48,10 @@ The following features can be found in this project.
 ## Installation
 
 The installation of the package can be done with npm.
+
 > `npm i ng-extensions`
+
+The page for the package can be found here: [ng-extensions@npmjs](https://www.npmjs.com/package/ng-extensions)
 
 ## Build
 
@@ -48,9 +61,3 @@ Run the following steps to build the project locally.
 * `npm install`
 * `ng build` for development and `ng build --prod` for production
 * `ng serve` for running the demo project locally
-
----
-
-## Dependencies
-
-> Coming soon

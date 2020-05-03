@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Build
         run:
-          npm run-script build-prod
+          npm run-script build-prod ng-extensions
 
       - name: Run Tests
         run:

@@ -1,15 +1,15 @@
-import {Injectable} from "@angular/core";
-import {AbstractStorage} from "./ng-extension.storage";
+import {Injectable} from '@angular/core';
+import {AbstractStorage} from './ng-extension.storage';
 
 @Injectable()
-export class LocalStorageProvider extends AbstractStorage {
+export class NgLocalStorageProvider extends AbstractStorage {
 
   constructor() {
-    super()
+    super();
   }
 
   public init(): void {
-    for (let key in Object.keys(localStorage)) {
+    for (const key of Object.keys(localStorage)) {
       this._valueMap.set(key, sessionStorage.getItem(key));
     }
   }
@@ -20,7 +20,9 @@ export class LocalStorageProvider extends AbstractStorage {
   }
 
   public getValue(key: string): string {
-    if (this._valueMap == null || this._valueMap.size == 0) this.init();
+    if (this._valueMap == null || this._valueMap.size === 0){
+      this.init();
+    }
     return localStorage.getItem(key);
   }
 

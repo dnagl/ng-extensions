@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform} from "@angular/core";
-import {isNumber} from "../../utils/ng-extension.utils";
+import {Pipe, PipeTransform} from '@angular/core';
+import {isNumber} from '../../utils/ng-extension.utils';
 
 @Pipe({
   name: 'isNumber'

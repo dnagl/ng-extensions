@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {NgExtensionNavigationProvider} from "../ng-extension.navigation.provider";
+import {Component} from '@angular/core';
+import {NgExtensionNavigationProvider} from '../ng-extension.navigation.provider';
 
 @Component({
   selector: 'ng-navigation-layout',

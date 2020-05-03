@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {NgExtensionListProvider} from "../ng-extension.list.provider";
+import {Component} from '@angular/core';
+import {NgExtensionListProvider} from '../ng-extension.list.provider';
 
 @Component({
   selector: 'ng-list-gallery',

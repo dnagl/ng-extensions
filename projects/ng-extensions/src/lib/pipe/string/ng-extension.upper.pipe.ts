@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform} from "@angular/core";
-import {toUpperCase} from "../../utils/ng-extension.utils";
+import {Pipe, PipeTransform} from '@angular/core';
+import {toUpperCase} from '../../utils/ng-extension.utils';
 
 @Pipe({
   name: 'toUpper'

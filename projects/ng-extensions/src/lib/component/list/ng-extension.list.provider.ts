@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {NgListCollection} from "./ng-extension.list.model";
+import {Injectable} from '@angular/core';
+import {NgListCollection} from './ng-extension.list.model';
 
 @Injectable()
 export class NgExtensionListProvider {
@@ -19,12 +19,12 @@ export class NgExtensionListProvider {
   }
 
   public addListCollection(listCollection: NgListCollection): void {
-    listCollection.id = this._listCollections.length == 0 ? 0 : this._listCollections[this._listCollections.length - 1].id + 1;
+    listCollection.id = this._listCollections.length === 0 ? 0 : this._listCollections[this._listCollections.length - 1].id + 1;
     this.listCollections.push(listCollection);
   }
 
   public removeListCollection(listCollection: NgListCollection): void {
-    this.listCollections = this.listCollections.filter(o => o.id != listCollection.id);
+    this.listCollections = this.listCollections.filter(o => o.id !== listCollection.id);
   }
 
   public cleanListCollections(): void {

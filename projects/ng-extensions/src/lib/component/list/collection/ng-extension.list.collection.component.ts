@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from "@angular/core";
-import {NgExtensionListProvider} from "../ng-extension.list.provider";
-import {NgListCollection} from "../ng-extension.list.model";
+import {Component, Input, OnInit} from '@angular/core';
+import {NgExtensionListProvider} from '../ng-extension.list.provider';
+import {NgListCollection} from '../ng-extension.list.model';
 
 @Component({
   selector: 'ng-list-collection',
@@ -25,6 +25,6 @@ export class NgListCollectionComponent {
   @Input('collectionId')
   set id(value: number) {
     this._id = value;
-    this.listCollection = this.listProvider.listCollections.find(o => o.id == this._id);
+    this.listCollection = this.listProvider.listCollections.find(o => o.id === this._id);
   }
 }

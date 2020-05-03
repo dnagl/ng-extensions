@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {NgNavigationContext} from "./ng-extension.navigation.model";
+import {Injectable} from '@angular/core';
+import {NgNavigationContext} from './ng-extension.navigation.model';
 
 @Injectable()
 export class NgExtensionNavigationProvider {

@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {NgExtensionNotificationProvider} from "./ng-extension.notification.provider";
+import {Component, Input} from '@angular/core';
+import {NgExtensionNotificationProvider} from './ng-extension.notification.provider';
 
 @Component({
   selector: 'ng-notification',
@@ -11,7 +11,7 @@ import {NgExtensionNotificationProvider} from "./ng-extension.notification.provi
 })
 export class NgNotificationComponent {
 
-  @Input() width: number = 200;
+  @Input() width = 200;
 
   constructor(public notificationProvider: NgExtensionNotificationProvider) {
 

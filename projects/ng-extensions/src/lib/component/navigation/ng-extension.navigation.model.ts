@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 export class NgNavigationContext {
 
@@ -6,7 +6,8 @@ export class NgNavigationContext {
   private _navigationBrandElement: NgNavigationBrandElement;
 
 
-  constructor(navigationElements: Array<NgNavigationElement> = new Array<NgNavigationElement>(), navigationBrandElement: NgNavigationBrandElement = new NgNavigationBrandElement()) {
+  constructor(navigationElements: Array<NgNavigationElement> = new Array<NgNavigationElement>(),
+              navigationBrandElement: NgNavigationBrandElement = new NgNavigationBrandElement()) {
     this._navigationElements = navigationElements;
     this._navigationBrandElement = navigationBrandElement;
   }
@@ -35,7 +36,8 @@ export class NgNavigationElement {
   private _children: Array<NgNavigationElement>;
   private _component: any;
 
-  constructor(name: string = 'element', matIcon: string = 'home', component: any = null, children: Array<NgNavigationElement> = new Array<NgNavigationElement>()) {
+  constructor(name: string = 'element', matIcon: string = 'home', component: any = null,
+              children: Array<NgNavigationElement> = new Array<NgNavigationElement>()) {
     this._name = name;
     this._matIcon = matIcon;
     this._component = component;

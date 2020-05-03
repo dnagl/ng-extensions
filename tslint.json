@@ -104,7 +104,8 @@
       "options": [
         "ban-keywords",
         "check-format",
-        "allow-pascal-case"
+        "allow-pascal-case",
+        "allow-leading-underscore"
       ]
     },
     "whitespace": {
@@ -117,6 +118,9 @@
         "check-typecast"
       ]
     },
+    "no-shadowed-variable": [
+      false
+    ],
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
