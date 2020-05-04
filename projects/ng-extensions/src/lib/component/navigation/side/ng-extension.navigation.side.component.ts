@@ -16,7 +16,11 @@ export class NgNavigationSideComponent {
   }
 
   public getComponentPath(component: Component): string {
-    return '/' + this.router.config.find(o => o.component === component).path;
+    const routerConfig = this.router.config.find(o => o.component === component);
+    if (routerConfig == null){
+      return;
+    }
+    return '/' + routerConfig.path;
   }
 
 }

@@ -16,6 +16,7 @@ import {NgListCollectionComponent} from './component/list/collection/ng-extensio
 import {NgExtensionListProvider} from './component/list/ng-extension.list.provider';
 import {NgListGalleryComponent} from './component/list/gallery/ng-extension.list.gallery.component';
 import {NgExtensionPipeModule} from './pipe/ng-extension.pipe.module';
+import {NgExtensionLoggingProvider} from './logging/ng-extension.logging.provider';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {NgExtensionPipeModule} from './pipe/ng-extension.pipe.module';
     NgExtensionNavigationProvider,
     NgExtensionNotificationProvider,
     NgLocalStorageProvider,
-    NgSessionStorageProvider
+    NgSessionStorageProvider,
+    NgExtensionLoggingProvider
   ]
 })
 export class NgExtensionModule {
