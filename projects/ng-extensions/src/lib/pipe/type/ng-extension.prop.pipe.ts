@@ -6,7 +6,7 @@ import {isNull} from '../../utils/ng-extension.utils';
 })
 export class NgExtensionPropPipe implements PipeTransform {
 
-  transform(value: any): any {
+  transform(value: any): Array<any> {
     if (isNull(value)){
       return [];
     }

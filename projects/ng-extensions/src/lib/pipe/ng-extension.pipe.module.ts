@@ -17,6 +17,28 @@ import {NgExtensionIsNullPipe} from './type/ng-extension.is-null.pipe';
 import {NgExtensionIsNumberPipe} from './type/ng-extension.is-number.pipe';
 import {NgExtensionIsPositivePipe} from './type/ng-extension.is-positive.pipe';
 import {NgExtensionIsFloatPipe} from './type/ng-extension.is-float.pipe';
+import {NgExtensionToArrayPipe} from './common/ng-extension.to-array.pipe';
+import {NgExtensionPaddingLeftPipe} from './string/ng-extension.padding-left.pipe';
+import {NgExtensionPaddingRightPipe} from './string/ng-extension.padding-right.pipe';
+import {NgExtensionPaddingPipe} from './string/ng-extension.padding.pipe';
+import {NgExtensionRepeatPipe} from './string/ng-extension.repeat.pipe';
+import {NgExtensionReplacePipe} from './common/ng-extension.replace.pipe';
+import {NgExtensionReversePipe} from './common/ng-extension.reverse.pipe';
+import {NgExtensionCapitalizePipe} from './string/ng-extension.capitalize.pipe';
+import {NgExtensionContainsPipe} from './common/ng-extension.contains.pipe';
+import {NgExtensionEndsWithPipe} from './common/ng-extension.ends-with.pipe';
+import {NgExtensionStartsWithPipe} from './common/ng-extension.starts-with.pipe';
+import {NgExtensionRemoveNewlinesPipe} from './string/ng-extension.remove-newlines.pipe';
+import {NgExtensionResolveTemplatePipe} from './string/ng-extension.resolve-template.pipe';
+import {NgExtensionSplitPipe} from './string/ng-extension.split.pipe';
+import {NgExtensionTrimPipe} from './string/ng-extension.trim.pipe';
+import {NgExtensionTrimHtmlPipe} from './string/ng-extension.trim-html.pipe';
+import {NgExtensionWrapPipe} from './string/ng-extension.wrap.pipe';
+import {NgExtensionAveragePipe} from './array/ng-extension.average.pipe';
+import {NgExtensionGroupPipe} from './array/ng-extension.group.pipe';
+import {NgExtensionMaxPipe} from './array/ng-extension.max.pipe';
+import {NgExtensionMinPipe} from './array/ng-extension.min.pipe';
+import {NgExtensionSumPipe} from './array/ng-extension.sum.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +59,29 @@ import {NgExtensionIsFloatPipe} from './type/ng-extension.is-float.pipe';
     NgExtensionIsNegativePipe,
     NgExtensionIsNullPipe,
     NgExtensionIsNumberPipe,
-    NgExtensionIsPositivePipe
+    NgExtensionIsPositivePipe,
+    NgExtensionToArrayPipe,
+    NgExtensionPaddingLeftPipe,
+    NgExtensionPaddingRightPipe,
+    NgExtensionPaddingPipe,
+    NgExtensionRepeatPipe,
+    NgExtensionReplacePipe,
+    NgExtensionReversePipe,
+    NgExtensionCapitalizePipe,
+    NgExtensionContainsPipe,
+    NgExtensionStartsWithPipe,
+    NgExtensionEndsWithPipe,
+    NgExtensionRemoveNewlinesPipe,
+    NgExtensionResolveTemplatePipe,
+    NgExtensionSplitPipe,
+    NgExtensionTrimPipe,
+    NgExtensionTrimHtmlPipe,
+    NgExtensionWrapPipe,
+    NgExtensionAveragePipe,
+    NgExtensionGroupPipe,
+    NgExtensionMaxPipe,
+    NgExtensionMinPipe,
+    NgExtensionSumPipe
   ],
   exports: [
     NgExtensionEmptyPipe,
@@ -57,7 +101,29 @@ import {NgExtensionIsFloatPipe} from './type/ng-extension.is-float.pipe';
     NgExtensionIsNegativePipe,
     NgExtensionIsNullPipe,
     NgExtensionIsNumberPipe,
-    NgExtensionIsPositivePipe
+    NgExtensionIsPositivePipe,
+    NgExtensionToArrayPipe,
+    NgExtensionPaddingLeftPipe,
+    NgExtensionPaddingRightPipe,
+    NgExtensionPaddingPipe,
+    NgExtensionRepeatPipe,
+    NgExtensionReplacePipe,
+    NgExtensionReversePipe,
+    NgExtensionCapitalizePipe,
+    NgExtensionContainsPipe,
+    NgExtensionStartsWithPipe,
+    NgExtensionEndsWithPipe,
+    NgExtensionRemoveNewlinesPipe,
+    NgExtensionResolveTemplatePipe,
+    NgExtensionSplitPipe,
+    NgExtensionTrimPipe,
+    NgExtensionTrimHtmlPipe,
+    NgExtensionWrapPipe,
+    NgExtensionAveragePipe,
+    NgExtensionGroupPipe,
+    NgExtensionMaxPipe,
+    NgExtensionMinPipe,
+    NgExtensionSumPipe
   ]
 })
 export class NgExtensionPipeModule {

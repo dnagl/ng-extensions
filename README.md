@@ -53,6 +53,21 @@ The installation of the package can be done with npm.
 
 The page for the package can be found here: [ng-extensions@npmjs](https://www.npmjs.com/package/ng-extensions)
 
+## Usage
+
+All components, and pipes can be used when adding this line to your `NgModule` of your application.
+
+```javascript
+@NgModule({
+  ...
+  imports: [
+    NgExtensionModule
+  ],
+  ...
+})
+export class MyApplicationModule {}
+```
+
 ## Build
 
 Run the following steps to build the project locally.

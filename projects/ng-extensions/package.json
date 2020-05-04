@@ -1,6 +1,8 @@
 {
   "name": "ng-extensions",
   "version": "1.0.1",
+  "license": "MIT",
+  "repository": "https://github.com/dnagl/ng-extensions",
   "peerDependencies": {
     "@angular/animations": "~9.1.1",
     "@angular/cdk": "^9.2.1",
