@@ -17,7 +17,7 @@ A demo project will be available soon ...
 
 ## Docs
 
-The documentation can be found in the doc directory in the repository. (GitHub)[https://github.com/dnagl/ng-extensions/tree/master/doc]
+The documentation can be found in the doc directory in the repository. [GitHub](https://github.com/dnagl/ng-extensions/tree/master/doc)
 
 ## Issues, Bugs and Contribution
 
@@ -52,6 +52,21 @@ The installation of the package can be done with npm.
 > `npm i ng-extensions`
 
 The page for the package can be found here: [ng-extensions@npmjs](https://www.npmjs.com/package/ng-extensions)
+
+## Usage
+
+All components, and pipes can be used when adding this line to your `NgModule` of your application.
+
+```javascript
+@NgModule({
+  ...
+  imports: [
+    NgExtensionModule
+  ],
+  ...
+})
+export class MyApplicationModule {}
+```
 
 ## Build
 
