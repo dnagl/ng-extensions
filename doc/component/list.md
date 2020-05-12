@@ -60,6 +60,7 @@ export class MyComponent {
 |textColorTitle|`string`|`'#212121'`|Font color of the title of the list element. Can be null.|
 |textColorContent|`string`|`'#212121'`|Font color of the content of the list element. Can be null.|
 |show|`boolean`|`true`|Element is visible.|
+|classList|`Array<string>`|`[]`|Holds extra classes which can be cutom added and removed|
 |actionItems|`Array<NgListElementAction>`|`[]`|Holds visible element actions|
 |data|`any`|`null`|Contains custom data which can be needed when action gets executed|
 

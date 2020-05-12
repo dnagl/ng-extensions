@@ -1,7 +1,7 @@
 <div
   *ngIf="listElement != null && listElement.show"
   [style.height]="height"
-  class="ng-extension-flex-row-space-between ng-extension-no-select ng-extension-list-element">
+  [class]="'ng-extension-flex-row-space-between ng-extension-no-select ng-extension-list-element ' + listElement.classList.join(' ')">
   <div class="ng-extension-flex-column ng-extension-list-element-text-container">
     <div class="ng-extension-list-element-title"
          [style.color]="listElement.textColorTitle">

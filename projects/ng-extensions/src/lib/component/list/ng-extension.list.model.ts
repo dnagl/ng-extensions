@@ -6,17 +6,20 @@ export class NgListElement {
   private _textColorTitle: string;
   private _textColorContent: string;
   private _show: boolean;
+  private _classList: Array<string>;
   private _actionItems: Array<NgListElementAction>;
   private _data: any;
 
   constructor(id: number = 0, title: string = '', content: string = '', textColorTitle = '#212121', textColorContent = '#212121',
-              show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
+              show: boolean = true, classList: Array<string> = new Array<string>(),
+              actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
     this._id = id;
     this._title = title;
     this._content = content;
     this._textColorTitle = textColorTitle;
     this._textColorContent = textColorContent;
     this._show = show;
+    this._classList = classList;
     this._actionItems = actionItems;
     this._data = data;
   }
@@ -51,6 +54,14 @@ export class NgListElement {
 
   set show(value: boolean) {
     this._show = value;
+  }
+
+  get classList(): Array<string> {
+    return this._classList;
+  }
+
+  set classList(value: Array<string>) {
+    this._classList = value;
   }
 
   get actionItems(): Array<NgListElementAction> {
