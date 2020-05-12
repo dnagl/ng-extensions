@@ -172,11 +172,12 @@ export class NgListCollection {
   private _backgroundColor: string;
   private _backgroundColorTitle: string;
   private _colorTitle: string;
+  private _heightTitle: string;
   private _listElements: Array<NgListElement>;
 
   constructor(id: number = 0, title: string = '', expand: boolean = true, showExpander: boolean = true, show: boolean = true,
               backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string = '#212121',
-              listElements: Array<NgListElement> = new Array<NgListElement>()) {
+              heightTitle: string = 'auto', listElements: Array<NgListElement> = new Array<NgListElement>()) {
     this._id = id;
     this._title = title;
     this._expand = expand;
@@ -185,6 +186,7 @@ export class NgListCollection {
     this._backgroundColor = backgroundColor;
     this._backgroundColorTitle = backgroundColorTitle;
     this._colorTitle = colorTitle;
+    this._heightTitle = heightTitle;
     this._listElements = listElements;
   }
 
@@ -243,6 +245,15 @@ export class NgListCollection {
 
   set colorTitle(value: string) {
     this._colorTitle = value;
+  }
+
+
+  get heightTitle(): string {
+    return this._heightTitle;
+  }
+
+  set heightTitle(value: string) {
+    this._heightTitle = value;
   }
 
   get listElements(): Array<NgListElement> {

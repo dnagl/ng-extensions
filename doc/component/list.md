@@ -86,6 +86,7 @@ export class MyComponent {
 |backgroundColor|`string`|`#ffffff`|Background color of collection|
 |backgroundColorTitle|`string`|`#00E676`|Background color of collection title|
 |colorTitle|`string`|`#000000`|Font color for title|
+|heightTitle|`string`|`auto`|Height of title|
 |listElements|`Array<NgListElement>`|`[]`|Elements in collection|
 
 ## Properties NgExtensionListProvider
