@@ -1,6 +1,6 @@
 {
   "name": "ng-extensions",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "license": "MIT",
   "repository": "https://github.com/dnagl/ng-extensions",
   "peerDependencies": {

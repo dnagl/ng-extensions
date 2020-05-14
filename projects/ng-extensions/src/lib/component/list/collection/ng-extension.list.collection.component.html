@@ -19,18 +19,21 @@
     </ng-template>
     <div class="ng-extension-flex-row ng-extension-list-collection ng-extension-list-collection-head-buttons">
       <button
+        [style.color]="listCollection.colorTitle"
         *ngIf="listCollection.expand && listCollection.collectionSearch != null"
         (click)="setSearchVisibility(true)"
         mat-icon-button color="primary">
         <mat-icon>{{listCollection.collectionSearch.searchIcon}}</mat-icon>
       </button>
       <button
+        [style.color]="listCollection.colorTitle"
         *ngIf="listCollection.expand && listCollection.showExpander"
         (click)="listCollection.expand = false"
         mat-icon-button color="primary">
         <mat-icon>keyboard_arrow_up</mat-icon>
       </button>
       <button
+        [style.color]="listCollection.colorTitle"
         *ngIf="!listCollection.expand && listCollection.showExpander"
         (click)="listCollection.expand = true"
         mat-icon-button color="primary">
@@ -45,6 +48,7 @@
        [style.font-size]="listCollection.collectionSearch.fontSize || listCollection.fontSizeTitle"
        class="ng-extension-flex-row ng-extension-list-collection-head-search">
     <button
+      [style.color]="listCollection.colorTitle"
       *ngIf="listCollection.collectionSearch != null"
       (click)="setSearchVisibility(false)"
       mat-icon-button color="primary">
