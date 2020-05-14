@@ -201,8 +201,8 @@ export class NgListCollection {
     this._id = null;
     this._title = title || '';
     this._customTitle = customTitle || false;
-    this._expand = expand || true;
-    this._showExpander = showExpander || true;
+    this._expand = expand;
+    this._showExpander = showExpander;
     this._show = show || true;
     this._backgroundColor = backgroundColor || '#ffffff';
     this._backgroundColorTitle = backgroundColorTitle || '#00E676';

@@ -21,7 +21,6 @@
 .ng-extension-list-collection-head-search{
   @extend .ng-extension-list-collection-head;
   align-items: center;
-  //font-size: 16px;
 }
 
 .ng-extension-list-collection-head-search > button{
@@ -39,6 +38,7 @@
 
 .ng-extension-list-collection-head-buttons{
   justify-content: flex-end;
+  align-items: center;
 }
 
 .ng-extension-list-collection-body {
