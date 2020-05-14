@@ -373,7 +373,7 @@ export class NgListCollection {
       return this.idGenerator(listElement, data);
     }
     else{
-      return 'ng-list-collection-element-' + uuidv5(listElement.title, NgExtensionStaticValues.NG_EXTENSION_UUID_NAMESPACE);
+      return 'ng-list-collection-element-' + uuidv5(String(Math.random()), NgExtensionStaticValues.NG_EXTENSION_UUID_NAMESPACE);
     }
   }
 }

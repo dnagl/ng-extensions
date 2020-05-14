@@ -48,14 +48,7 @@ export class NgExtensionListProvider {
       return this.idGenerator(listCollection, data);
     }
     else{
-      let uuidName: string;
-      if (!isEmpty(listCollection.listElements)){
-        uuidName = String(listCollection.listElements.length);
-      }
-      else{
-        uuidName = '0';
-      }
-      return 'ng-list-collection-' + uuidv5(uuidName, NgExtensionStaticValues.NG_EXTENSION_UUID_NAMESPACE);
+      return 'ng-list-collection-' + uuidv5(String(Math.random()), NgExtensionStaticValues.NG_EXTENSION_UUID_NAMESPACE);
     }
   }
 
