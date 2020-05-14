@@ -5,6 +5,7 @@ import {NgExtensionFirstPipe} from './array/ng-extension.first.pipe';
 import {NgExtensionLastPipe} from './array/ng-extension.last.pipe';
 import {NgExtensionFlatPipe} from './array/ng-extension.flat.pipe';
 import {NgExtensionPropPipe} from './type/ng-extension.prop.pipe';
+import {NgExtensionSafeHtmlPipe} from './dom/ng-extension.safe-html.pipe';
 import {NgExtensionUpperPipe} from './string/ng-extension.upper.pipe';
 import {NgExtensionUpperFirstPipe} from './string/ng-extension.upperfirst.pipe';
 import {NgExtensionLowerFirstPipe} from './string/ng-extension.lowerfirst.pipe';
@@ -50,6 +51,7 @@ import {NgExtensionSumPipe} from './array/ng-extension.sum.pipe';
     NgExtensionLowerPipe,
     NgExtensionLowerFirstPipe,
     NgExtensionPropPipe,
+    NgExtensionSafeHtmlPipe,
     NgExtensionUpperPipe,
     NgExtensionUpperFirstPipe,
     NgExtensionIsDefinedPipe,
@@ -92,6 +94,7 @@ import {NgExtensionSumPipe} from './array/ng-extension.sum.pipe';
     NgExtensionLowerPipe,
     NgExtensionLowerFirstPipe,
     NgExtensionPropPipe,
+    NgExtensionSafeHtmlPipe,
     NgExtensionUpperPipe,
     NgExtensionUpperFirstPipe,
     NgExtensionIsDefinedPipe,

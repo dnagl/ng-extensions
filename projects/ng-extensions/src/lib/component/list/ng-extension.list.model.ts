@@ -1,6 +1,9 @@
+import {v5 as uuidv5} from 'uuid';
+import {NgExtensionStaticValues} from '../../common/ng-extension.static.values';
+
 export class NgListElement {
 
-  private _id: number;
+  private _id: string;
   private _title: string;
   private _content: string;
   private _textColorTitle: string;
@@ -10,25 +13,24 @@ export class NgListElement {
   private _actionItems: Array<NgListElementAction>;
   private _data: any;
 
-  constructor(id: number = 0, title: string = '', content: string = '', textColorTitle = '#212121', textColorContent = '#212121',
-              show: boolean = true, classList: Array<string> = new Array<string>(),
-              actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
-    this._id = id;
-    this._title = title;
-    this._content = content;
-    this._textColorTitle = textColorTitle;
-    this._textColorContent = textColorContent;
-    this._show = show;
-    this._classList = classList;
-    this._actionItems = actionItems;
-    this._data = data;
+  constructor(title?: string, content?: string, textColorTitle?: string, textColorContent?, show?: boolean, classList?: Array<string>,
+              actionItems?: Array<NgListElementAction>, data?: any) {
+    this._id = null;
+    this._title = title || '';
+    this._content = content || '';
+    this._textColorTitle = textColorTitle || '#212121';
+    this._textColorContent = textColorContent || '#212121';
+    this._show = show || true;
+    this._classList = classList || new Array<string>();
+    this._actionItems = actionItems || new Array<NgListElementAction>();
+    this._data = data || null;
   }
 
-  get id(): number {
+  get id(): string {
     return this._id;
   }
 
-  set id(value: number) {
+  set id(value: string) {
     this._id = value;
   }
 
@@ -110,14 +112,14 @@ export class NgListElementAction {
   private _callback: (elementAction: NgListElementAction) => void;
   private _parent: NgListElement;
 
-  constructor(isIcon: boolean = true, content: string = 'edit', color: string = '#000000', show: boolean = true,
-              callback: (elementAction: NgListElementAction) => void = null, parent: NgListElement = null) {
-    this._isIcon = isIcon;
-    this._content = content;
-    this._color = color;
-    this._show = show;
-    this._callback = callback;
-    this._parent = parent;
+  constructor(isIcon?: boolean, content?: string, color?: string, show?: boolean,
+              callback?: (elementAction: NgListElementAction) => void, parent?: NgListElement ) {
+    this._isIcon = isIcon || true;
+    this._content = content || 'edit';
+    this._color = color || '#212121';
+    this._show = show || true;
+    this._callback = callback || null;
+    this._parent = parent || null;
   }
 
   get isIcon(): boolean {
@@ -174,9 +176,9 @@ export class NgListElementAction {
 }
 
 export class NgListCollection {
-
-  private _id: number;
+  private _id: string;
   private _title: string;
+  private _customTitle: boolean;
   private _expand: boolean;
   private _showExpander: boolean;
   private _show: boolean;
@@ -184,28 +186,42 @@ export class NgListCollection {
   private _backgroundColorTitle: string;
   private _colorTitle: string;
   private _heightTitle: string;
+  private _fontSizeTitle: string;
+  private _fontWeightTitle: string;
   private _listElements: Array<NgListElement>;
+  private _elementCountTitle: boolean;
+  private _elementCountTitleMax: number;
+  private _collectionSearch: NgListCollectionSearch;
+  private _idGenerator: NgListElementIdGenerator;
 
-  constructor(id: number = 0, title: string = '', expand: boolean = true, showExpander: boolean = true, show: boolean = true,
-              backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string = '#212121',
-              heightTitle: string = 'auto', listElements: Array<NgListElement> = new Array<NgListElement>()) {
-    this._id = id;
-    this._title = title;
-    this._expand = expand;
-    this._showExpander = showExpander;
-    this._show = show;
-    this._backgroundColor = backgroundColor;
-    this._backgroundColorTitle = backgroundColorTitle;
-    this._colorTitle = colorTitle;
-    this._heightTitle = heightTitle;
-    this._listElements = listElements;
+  constructor(title?: string, customTitle?: boolean, expand?: boolean, showExpander?: boolean, show?: boolean,
+              backgroundColor?: string, backgroundColorTitle?: string, colorTitle?: string, heightTitle?: string, fontSizeTitle?: string,
+              fontWeightTitle?: string, listElements?: Array<NgListElement>, elementCountTitle?: boolean, elementCountTitleMax?: number,
+              collectionSearch?: NgListCollectionSearch, idGenerator?: NgListElementIdGenerator) {
+    this._id = null;
+    this._title = title || '';
+    this._customTitle = customTitle || false;
+    this._expand = expand || true;
+    this._showExpander = showExpander || true;
+    this._show = show || true;
+    this._backgroundColor = backgroundColor || '#ffffff';
+    this._backgroundColorTitle = backgroundColorTitle || '#00E676';
+    this._colorTitle = colorTitle || '#212121';
+    this._heightTitle = heightTitle || 'auto';
+    this._fontSizeTitle = fontSizeTitle || '18px';
+    this._fontWeightTitle = fontWeightTitle || '500';
+    this._listElements = listElements || new Array<NgListElement>();
+    this._elementCountTitle = elementCountTitle || false;
+    this._elementCountTitleMax = elementCountTitleMax || 0;
+    this._collectionSearch = collectionSearch || null;
+    this._idGenerator = idGenerator || null;
   }
 
-  get id(): number {
+  get id(): string {
     return this._id;
   }
 
-  set id(value: number) {
+  set id(value: string) {
     this._id = value;
   }
 
@@ -215,6 +231,14 @@ export class NgListCollection {
 
   set title(value: string) {
     this._title = value;
+  }
+
+  get customTitle(): boolean {
+    return this._customTitle;
+  }
+
+  set customTitle(value: boolean) {
+    this._customTitle = value;
   }
 
   get expand(): boolean {
@@ -267,6 +291,22 @@ export class NgListCollection {
     this._heightTitle = value;
   }
 
+  get fontSizeTitle(): string {
+    return this._fontSizeTitle;
+  }
+
+  set fontSizeTitle(value: string) {
+    this._fontSizeTitle = value;
+  }
+
+  get fontWeightTitle(): string {
+    return this._fontWeightTitle;
+  }
+
+  set fontWeightTitle(value: string) {
+    this._fontWeightTitle = value;
+  }
+
   get listElements(): Array<NgListElement> {
     return this._listElements;
   }
@@ -283,16 +323,116 @@ export class NgListCollection {
     this._showExpander = value;
   }
 
-  public addListElement(listElement: NgListElement): void {
-    listElement.id = this._listElements.length === 0 ? 0 : this._listElements[this._listElements.length - 1].id + 1;
+  get elementCountTitle(): boolean {
+    return this._elementCountTitle;
+  }
+
+  set elementCountTitle(value: boolean) {
+    this._elementCountTitle = value;
+  }
+
+  get elementCountTitleMax(): number {
+    return this._elementCountTitleMax;
+  }
+
+  set elementCountTitleMax(value: number) {
+    this._elementCountTitleMax = value;
+  }
+
+  get collectionSearch(): NgListCollectionSearch {
+    return this._collectionSearch;
+  }
+
+  set collectionSearch(value: NgListCollectionSearch) {
+    this._collectionSearch = value;
+  }
+
+  public addListElement(listElement: NgListElement, data?: any): void {
+    listElement.id = this.generateId(listElement, data);
     this._listElements.push(listElement);
   }
 
-  public removeListElement(listCollection: NgListElement): void {
-    this.listElements = this.listElements.filter(o => o.id !== listCollection.id);
+  public removeListElement(listElement: NgListElement): void {
+    this.listElements = this.listElements.filter(o => o.id !== listElement.id);
   }
 
   public cleanElements(): void {
     this.listElements = new Array<NgListElement>();
   }
+
+  get idGenerator(): NgListElementIdGenerator {
+    return this._idGenerator;
+  }
+
+  set idGenerator(value: NgListElementIdGenerator) {
+    this._idGenerator = value;
+  }
+
+  private generateId(listElement: NgListElement, data?: any): string{
+    if (this._idGenerator != null){
+      return this.idGenerator(listElement, data);
+    }
+    else{
+      return 'ng-list-collection-element-' + uuidv5(listElement.title, NgExtensionStaticValues.NG_EXTENSION_UUID_NAMESPACE);
+    }
+  }
 }
+
+export class NgListCollectionSearch {
+
+  private _searchIcon: string;
+  private _caseSensitive: boolean;
+  private _fontSize: string;
+  private _fontWeight: string;
+  private _searchLabel: string;
+  private _searchValue: string;
+
+  constructor(searchLabel?: string, caseSensitive?: boolean, searchIcon?: string, fontSize?: string, fontWeight?: string,
+              searchValue?: string) {
+    this._searchIcon = searchIcon || 'search';
+    this._caseSensitive = caseSensitive || false;
+    this._fontSize = fontSize || '16px';
+    this._fontWeight = fontWeight || '400';
+    this._searchLabel = searchLabel || 'Search';
+    this._searchValue = searchValue || '';
+  }
+
+  get searchIcon(): string {
+    return this._searchIcon;
+  }
+  set searchIcon(value: string) {
+    this._searchIcon = value;
+  }
+
+  get fontSize(): string {
+    return this._fontSize;
+  }
+
+  set fontSize(value: string) {
+    this._fontSize = value;
+  }
+
+  get caseSensitive(): boolean {
+    return this._caseSensitive;
+  }
+  set caseSensitive(value: boolean) {
+    this._caseSensitive = value;
+  }
+
+  get searchLabel(): string {
+    return this._searchLabel;
+  }
+  set searchLabel(value: string) {
+    this._searchLabel = value;
+  }
+
+  get searchValue(): string {
+    return this._searchValue;
+  }
+  set searchValue(value: string) {
+    this._searchValue = value;
+  }
+}
+
+export type NgListElementIdGenerator = (element: NgListElement, data: any) => string;
+export type NgListCollectionIdGenerator = (ngListCollection: NgListCollection, data: any) => string;

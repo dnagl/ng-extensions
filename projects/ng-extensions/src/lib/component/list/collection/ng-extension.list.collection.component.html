@@ -1,29 +1,74 @@
 <div
   *ngIf="listCollection != null && listCollection.show"
   [style.background-color]="listCollection.backgroundColor"
+  [id]="listCollection.id"
   class="ng-extension-flex-column-center ng-extension-no-select ng-extension-list-collection">
-  <div
-    [style.background-color]="listCollection.backgroundColorTitle"
-    [style.height]="listCollection.heightTitle"
-    [style.color]="listCollection.colorTitle"
-    class="ng-extension-flex-row-space-between ng-extension-list-collection-head">
-    <span>{{listCollection.title}}</span>
+  <div *ngIf="!showSearch"
+       [style.background-color]="listCollection.backgroundColorTitle"
+       [style.height]="listCollection.heightTitle"
+       [style.color]="listCollection.colorTitle"
+       [style.font-size]="listCollection.fontSizeTitle"
+       [style.font-weight]="listCollection.fontWeightTitle"
+       class="ng-extension-flex-row-space-between ng-extension-list-collection-head">
+    <div class="ng-extension-flex-row ng-extension-list-collection-head-content" *ngIf="!listCollection.customTitle; else customTitle">
+      <span>{{listCollection.title}}</span>
+    </div>
+    <ng-template #customTitle>
+      <div class="ng-extension-flex-row ng-extension-list-collection-head-content" [innerHTML]="listCollection.title | safe: 'html'">
+      </div>
+    </ng-template>
+    <div class="ng-extension-flex-row ng-extension-list-collection ng-extension-list-collection-head-buttons">
+      <button
+        *ngIf="listCollection.expand && listCollection.collectionSearch != null"
+        (click)="setSearchVisibility(true)"
+        mat-icon-button color="primary">
+        <mat-icon>{{listCollection.collectionSearch.searchIcon}}</mat-icon>
+      </button>
+      <button
+        *ngIf="listCollection.expand && listCollection.showExpander"
+        (click)="listCollection.expand = false"
+        mat-icon-button color="primary">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+      <button
+        *ngIf="!listCollection.expand && listCollection.showExpander"
+        (click)="listCollection.expand = true"
+        mat-icon-button color="primary">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="showSearch && listCollection.collectionSearch != null"
+       [style.background-color]="listCollection.backgroundColorTitle"
+       [style.height]="listCollection.heightTitle"
+       [style.color]="listCollection.colorTitle"
+       [style.font-size]="listCollection.collectionSearch.fontSize || listCollection.fontSizeTitle"
+       class="ng-extension-flex-row ng-extension-list-collection-head-search">
     <button
-      *ngIf="listCollection.expand && listCollection.showExpander"
-      (click)="listCollection.expand = false"
+      *ngIf="listCollection.collectionSearch != null"
+      (click)="setSearchVisibility(false)"
       mat-icon-button color="primary">
-      <mat-icon>keyboard_arrow_up</mat-icon>
+      <mat-icon>arrow_back_ios</mat-icon>
     </button>
-    <button
-      *ngIf="!listCollection.expand && listCollection.showExpander"
-      (click)="listCollection.expand = true"
-      mat-icon-button color="primary">
-      <mat-icon>keyboard_arrow_down</mat-icon>
-    </button>
+    <form>
+      <mat-form-field>
+        <mat-label>{{listCollection.collectionSearch.searchLabel}}</mat-label>
+        <input [(ngModel)]="listCollection.collectionSearch.searchValue" matInput type="text" [name]="'listCollection_search_form-' + listCollection.id">
+        <button *ngIf="listCollection.collectionSearch.searchValue" (click)="listCollection.collectionSearch.searchValue = ''"
+                mat-button matSuffix mat-icon-button aria-label="Clear">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
   </div>
   <div
-    *ngIf="listCollection.expand && listCollection.listElements != null && listCollection.listElements.length > 0"
+    *ngIf="listCollection.expand && listCollection.listElements != null && listCollection.listElements.length > 0 && !showSearch"
     class="ng-extension-flex-column-center ng-extension-list-collection-body">
     <ng-list-element *ngFor="let element of listCollection.listElements" [listElement]="element"></ng-list-element>
+  </div>
+  <div
+    *ngIf="listCollection.expand && listCollection.listElements != null && listCollection.listElements.length > 0 && showSearch"
+    class="ng-extension-flex-column-center ng-extension-list-collection-body">
+    <ng-list-element *ngFor="let element of filteredElements()" [listElement]="element"></ng-list-element>
   </div>
 </div>

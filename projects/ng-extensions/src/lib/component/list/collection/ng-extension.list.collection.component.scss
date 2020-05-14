@@ -14,8 +14,31 @@
   border-top-right-radius: 5px;
 }
 
-.ng-extension-list-collection-head > span {
+.ng-extension-list-collection-head-content > span {
   margin: 5px 0 5px 15px;
+}
+
+.ng-extension-list-collection-head-search{
+  @extend .ng-extension-list-collection-head;
+  align-items: center;
+  //font-size: 16px;
+}
+
+.ng-extension-list-collection-head-search > button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ng-extension-list-collection-head-search > form{
+  flex-grow: 1;
+  margin-right: 15px;
+}
+.ng-extension-list-collection-head-search > form > mat-form-field{
+  width: 100%;
+}
+
+.ng-extension-list-collection-head-buttons{
+  justify-content: flex-end;
 }
 
 .ng-extension-list-collection-body {

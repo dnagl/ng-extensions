@@ -39,6 +39,7 @@ export * from './lib/pipe/common/ng-extension.replace.pipe';
 export * from './lib/pipe/common/ng-extension.reverse.pipe';
 export * from './lib/pipe/common/ng-extension.starts-with.pipe';
 export * from './lib/pipe/common/ng-extension.to-array.pipe';
+export * from './lib/pipe/dom/ng-extension.safe-html.pipe';
 export * from './lib/pipe/string/ng-extension.capitalize.pipe';
 export * from './lib/pipe/string/ng-extension.lower.pipe';
 export * from './lib/pipe/string/ng-extension.lowerfirst.pipe';

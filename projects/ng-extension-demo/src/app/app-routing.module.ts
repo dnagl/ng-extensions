@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {NotificationComponent} from "./component/notification/notification.component";
 import {ComponentComponent} from "./component/component.component";
-import {ListComponent} from "./component/list/notification.component";
+import {ListComponent} from "./component/list/list.component";
 
 
 const routes: Routes = [

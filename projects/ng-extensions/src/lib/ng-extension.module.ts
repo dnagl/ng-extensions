@@ -17,6 +17,7 @@ import {NgExtensionListProvider} from './component/list/ng-extension.list.provid
 import {NgListGalleryComponent} from './component/list/gallery/ng-extension.list.gallery.component';
 import {NgExtensionPipeModule} from './pipe/ng-extension.pipe.module';
 import {NgExtensionLoggingProvider} from './logging/ng-extension.logging.provider';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {NgExtensionLoggingProvider} from './logging/ng-extension.logging.provide
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    FormsModule,
     AngularMaterialModule,
     RouterModule,
     NgExtensionPipeModule
