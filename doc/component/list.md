@@ -71,7 +71,9 @@ export class MyComponent {
 |isIcon|`boolean`|`true`|If Material Icons should be used|
 |content|`string`|`''`|Icon name or text|
 |color|`string`|`''`|Font color of content|
+|colorDisabled|`string`|`''`|Font color when button is disabled|
 |show|`boolean`|`true`|Element is visible.|
+|disabled|`boolean`|`false`|Element is disabled|
 |callback|`(elementAction: NgListElementAction): void`|`null`|Callback which gets called when button is pressed|
 |parent|`NgListElement`|`null`|Parent `NgListElement` of action object|
 
