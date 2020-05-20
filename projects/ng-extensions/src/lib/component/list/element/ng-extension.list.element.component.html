@@ -19,11 +19,11 @@
     <div
       *ngFor="let action of listElement.actionItems"
       class="ng-extension-flex-column-center ng-extension-list-element-action">
-      <button *ngIf="action.show && action.isIcon" mat-icon-button [style.color]="action.color"
-              (click)="action.execute()">
+      <button *ngIf="action.show && action.isIcon" mat-icon-button [disabled]="action.disabled"
+              [style.color]="action.disabled ? action.colorDisabled : action.color" (click)="action.execute()">
         <mat-icon>{{action.content}}</mat-icon>
       </button>
-      <button *ngIf="action.show && !action.isIcon" mat-mini-fab [style.color]="action.color"
+      <button *ngIf="action.show && !action.isIcon" mat-mini-fab [style.color]="action.color" [disabled]="action.disabled"
               (click)="action.execute()">
         <mat-icon>{{action.content}}</mat-icon>
       </button>

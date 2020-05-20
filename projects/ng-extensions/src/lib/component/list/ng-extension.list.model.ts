@@ -108,16 +108,20 @@ export class NgListElementAction {
   private _isIcon: boolean;
   private _content: string;
   private _color: string;
+  private _colorDisabled: string;
   private _show: boolean;
+  private _disabled: boolean;
   private _callback: (elementAction: NgListElementAction) => void;
   private _parent: NgListElement;
 
-  constructor(isIcon?: boolean, content?: string, color?: string, show?: boolean,
+  constructor(isIcon?: boolean, content?: string, color?: string, colorDisabled?: string, show?: boolean, disabled?: boolean,
               callback?: (elementAction: NgListElementAction) => void, parent?: NgListElement ) {
     this._isIcon = isIcon || true;
     this._content = content || 'edit';
     this._color = color || '#212121';
+    this._colorDisabled = colorDisabled || '#E0E0E0';
     this._show = show;
+    this._disabled = disabled;
     this._callback = callback || null;
     this._parent = parent || null;
   }
@@ -146,12 +150,28 @@ export class NgListElementAction {
     this._color = value;
   }
 
+  get colorDisabled(): string {
+    return this._colorDisabled;
+  }
+
+  set colorDisabled(value: string) {
+    this._colorDisabled = value;
+  }
+
   get show(): boolean {
     return this._show;
   }
 
   set show(value: boolean) {
     this._show = value;
+  }
+
+  get disabled(): boolean {
+    return this._disabled;
+  }
+
+  set disabled(value: boolean) {
+    this._disabled = value;
   }
 
   get callback(): (elementAction: NgListElementAction) => void {
