@@ -20,7 +20,7 @@ export class NgListElement {
     this._content = content || '';
     this._textColorTitle = textColorTitle || '#212121';
     this._textColorContent = textColorContent || '#212121';
-    this._show = show || true;
+    this._show = show;
     this._classList = classList || new Array<string>();
     this._actionItems = actionItems || new Array<NgListElementAction>();
     this._data = data || null;
@@ -117,7 +117,7 @@ export class NgListElementAction {
     this._isIcon = isIcon || true;
     this._content = content || 'edit';
     this._color = color || '#212121';
-    this._show = show || true;
+    this._show = show;
     this._callback = callback || null;
     this._parent = parent || null;
   }
@@ -200,10 +200,10 @@ export class NgListCollection {
               collectionSearch?: NgListCollectionSearch, idGenerator?: NgListElementIdGenerator) {
     this._id = null;
     this._title = title || '';
-    this._customTitle = customTitle || false;
+    this._customTitle = customTitle;
     this._expand = expand;
     this._showExpander = showExpander;
-    this._show = show || true;
+    this._show = show;
     this._backgroundColor = backgroundColor || '#ffffff';
     this._backgroundColorTitle = backgroundColorTitle || '#00E676';
     this._colorTitle = colorTitle || '#212121';
@@ -390,7 +390,7 @@ export class NgListCollectionSearch {
   constructor(searchLabel?: string, caseSensitive?: boolean, searchIcon?: string, fontSize?: string, fontWeight?: string,
               searchValue?: string) {
     this._searchIcon = searchIcon || 'search';
-    this._caseSensitive = caseSensitive || false;
+    this._caseSensitive = caseSensitive;
     this._fontSize = fontSize || '16px';
     this._fontWeight = fontWeight || '400';
     this._searchLabel = searchLabel || 'Search';
