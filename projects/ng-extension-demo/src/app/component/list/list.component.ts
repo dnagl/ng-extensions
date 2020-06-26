@@ -20,6 +20,7 @@ export class ListComponent{
       listCollection.title = 'My List' + x;
       listCollection.show = true;
       listCollection.collectionSearch = new NgListCollectionSearch('Search for ...', false, 'waves');
+      listCollection.collectionSearch.autoFocus = true;
       listCollection.showExpander = true;
       listCollection.expand = true;
       listCollection.heightTitle = '80px';
@@ -30,6 +31,15 @@ export class ListComponent{
         const element = new NgListElement();
         element.content = 'Hello Element ' + i + '!';
 
+        const addActionElement = new NgListElementAction();
+        addActionElement.parent = element;
+        addActionElement.content = 'content_copy';
+        addActionElement.show = true;
+        addActionElement.disabled = false;
+        addActionElement.callback = (o) => {
+          listCollection.addListElement(addActionElement.parent);
+        };
+
         const editActionElement = new NgListElementAction();
         editActionElement.parent = element;
         editActionElement.content = 'edit';
@@ -37,12 +47,9 @@ export class ListComponent{
         editActionElement.disabled = true;
         editActionElement.callback = (o) => console.log(o.parent.id);
 
-        const deleteActionElement = new NgListElementAction();
-        deleteActionElement.parent = element;
-        deleteActionElement.content = 'delete';
-        deleteActionElement.show = true;
-        editActionElement.callback = (o) => console.log(o.parent.id);
+        const deleteActionElement = new NgListElementAction(true, 'delete', null, null, true, false, (o) => this.removeElement(o.parent, listCollection), element);
 
+        element.addActionItem(addActionElement);
         element.addActionItem(editActionElement);
         element.addActionItem(deleteActionElement);
         listCollection.addListElement(element);
@@ -50,5 +57,9 @@ export class ListComponent{
     }
   }
 
+  public removeElement(element: NgListElement, listCollection: NgListCollection){
+    listCollection.listElements = listCollection.listElements.filter(o => o.id !== element.id);
+    console.log(listCollection.listElements);
+  }
 
 }

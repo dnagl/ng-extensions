@@ -20,6 +20,8 @@ export * from './lib/component/notification/ng-extension.notification.provider';
 export * from './lib/connector/ng-extensions.rest.service';
 export * from './lib/connector/ng-extensions.ws.service';
 
+export * from './lib/directive/ng-extension.mat-autofocus.directive';
+
 export * from './lib/logging/ng-extension.logging.model';
 export * from './lib/logging/ng-extension.logging.provider';
 

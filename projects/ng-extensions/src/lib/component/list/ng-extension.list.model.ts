@@ -406,15 +406,17 @@ export class NgListCollectionSearch {
   private _fontWeight: string;
   private _searchLabel: string;
   private _searchValue: string;
+  private _autoFocus: boolean;
 
   constructor(searchLabel?: string, caseSensitive?: boolean, searchIcon?: string, fontSize?: string, fontWeight?: string,
-              searchValue?: string) {
+              searchValue?: string, autoFocus?: boolean) {
     this._searchIcon = searchIcon || 'search';
     this._caseSensitive = caseSensitive;
     this._fontSize = fontSize || '16px';
     this._fontWeight = fontWeight || '400';
     this._searchLabel = searchLabel || 'Search';
     this._searchValue = searchValue || '';
+    this._autoFocus = autoFocus || false;
   }
 
   get searchIcon(): string {
@@ -451,6 +453,13 @@ export class NgListCollectionSearch {
   }
   set searchValue(value: string) {
     this._searchValue = value;
+  }
+
+  get autoFocus(): boolean {
+    return this._autoFocus;
+  }
+  set autoFocus(value: boolean) {
+    this._autoFocus = value;
   }
 }
 

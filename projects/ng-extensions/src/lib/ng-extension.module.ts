@@ -18,6 +18,7 @@ import {NgListGalleryComponent} from './component/list/gallery/ng-extension.list
 import {NgExtensionPipeModule} from './pipe/ng-extension.pipe.module';
 import {NgExtensionLoggingProvider} from './logging/ng-extension.logging.provider';
 import {FormsModule} from '@angular/forms';
+import {NgExtensionDirectiveModule} from './directive/ng-extension.directive.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     AngularMaterialModule,
     RouterModule,
-    NgExtensionPipeModule
+    NgExtensionPipeModule,
+    NgExtensionDirectiveModule
   ],
   exports: [
     NgListCollectionComponent,
@@ -45,7 +47,8 @@ import {FormsModule} from '@angular/forms';
     NgNavigationLayoutComponent,
     NgNavigationSideComponent,
     NgNavigationTopComponent,
-    NgExtensionPipeModule
+    NgExtensionPipeModule,
+    NgExtensionDirectiveModule
   ],
   providers: [
     NgExtensionListProvider,

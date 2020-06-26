@@ -57,7 +57,9 @@
     <form>
       <mat-form-field>
         <mat-label>{{listCollection.collectionSearch.searchLabel}}</mat-label>
-        <input [(ngModel)]="listCollection.collectionSearch.searchValue" matInput type="text" [name]="'listCollection_search_form-' + listCollection.id">
+        <input matInput [ngMatInputAutoFocus]="listCollection.collectionSearch.autoFocus"
+               [(ngModel)]="listCollection.collectionSearch.searchValue"
+               type="text" [name]="'listCollection_search_form-' + listCollection.id">
         <button *ngIf="listCollection.collectionSearch.searchValue" (click)="listCollection.collectionSearch.searchValue = ''"
                 mat-button matSuffix mat-icon-button aria-label="Clear">
           <mat-icon>close</mat-icon>
